@@ -108,9 +108,7 @@ if (get_field('project_status') == 'implementation') {?>
                     <p class="desc">
                         Description:
                     </p>
-
                     <?php the_content();?>
-
                 </div>
 
             </div>

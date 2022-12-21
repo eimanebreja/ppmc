@@ -151,6 +151,31 @@ function project_custom_post_type()
 }
 add_action('init', 'project_custom_post_type');
 
+function investment_opportunities_custom_post_type()
+{
+    register_post_type('investments',
+        array(
+            'rewrite' => array('slug' => 'investment'),
+            'labels' => array(
+                'name' => 'Investment Opportunites',
+                'singular_name' => 'Investment Opportunites',
+                'add_new_item' => 'Add New Investment Opportunites',
+                'edit_item' => 'Edit Investment Opportunites',
+            ),
+            'menu-icon' => 'dashicons-clipboard',
+            'public' => true,
+            'has_archive' => true,
+            'show_in_rest' => true,
+            'supports' => array(
+                'title', 'thumbnail', 'editor', 'excerpt', 'comments',
+            ),
+
+            'taxonomies' => array('post_tag'),
+        )
+    );
+}
+add_action('init', 'investment_opportunities_custom_post_type');
+
 /**
  * Comment Form Placeholder Author, Email, URL
  */

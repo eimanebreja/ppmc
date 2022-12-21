@@ -80,12 +80,27 @@
                     </div>
                 </div>
                 <div class="nav__content--bottom">
+
                     <div class="nav__bottomarea">
                         <div class="nav__bottomarea--conversion">
                             <div class="status">
                             </div>
                             <div class="conversion">
-                                1 USD = 56.7736 PHP
+                                <?php
+$req_url = 'https://v6.exchangerate-api.com/v6/cd86f7c7785e92c722d8ea5d/latest/USD';
+$response_json = file_get_contents($req_url);
+if (false !== $response_json) {
+    try {
+        $response = json_decode($response_json);
+        if ('success' === $response->result) {
+            $base_price = 1;
+            $PHP_price = round(($base_price * $response->conversion_rates->PHP), 2);
+        }
+    } catch (Exception $e) {
+    }
+}
+?>
+                                1 USD = <?php echo $PHP_price; ?> PHP
                             </div>
                             <div class="date">
                                 <?php the_time('F j, Y');?>
@@ -93,7 +108,7 @@
                         </div>
                         <ul class=" nav__bottomarea--moremenu" style="display:none">
                             <li class="nav__bottomarea--list">
-                                <a href="" class="nav__bottomarea--link">GAD</a>
+                                <a href="<?php echo site_url('/gad'); ?>" class="nav__bottomarea--link">GAD</a>
                             </li>
                             <li class="nav__bottomarea--list">
                                 <a href="" class="nav__bottomarea--link">Book your Events</a>

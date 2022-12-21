@@ -17,173 +17,216 @@ get_header();
         <div class="investment__container">
             <div class="investment__body">
                 <div class="investment__tab">
+                    <!--- Button TAB --->
                     <ul class="investment__tab--btn">
-                        <li data-tab-target="#airport" class="active">Airport</li>
-                        <li data-tab-target="#seaport">Seaport</li>
-                        <li data-tab-target="#mixed">Mixed - Used Commercial Area</li>
-                        <li data-tab-target="#tourism">Tourism Complex</li>
+                        <?php
+query_posts(array(
+    'post_type' => 'investments',
+    'posts_per_page' => 1,
+    'orderby' => array(
+        'date' => 'ASC',
+    ),
+));?>
+                        <?php if (have_posts()): ?>
+                        <?php while (have_posts()): the_post();?>
+                        <li data-tab-target="#<?php the_field('tab_id');?>" class="active">
+                            <?php the_field('name');?>
+                        </li>
+                        <?php endwhile;?>
+                        <?php else: ?>
+                        <?php endif;?>
+
+
+
+                        <?php
+query_posts(array(
+    'post_type' => 'investments',
+    'posts_per_page' => 5,
+    'offset' => 1,
+    'orderby' => array(
+        'date' => 'ASC',
+    ),
+));?>
+                        <?php if (have_posts()): ?>
+                        <?php while (have_posts()): the_post();?>
+                        <li data-tab-target="#<?php the_field('tab_id');?>">
+                            <?php the_field('name');?>
+                        </li>
+                        <?php endwhile;?>
+                        <?php else: ?>
+                        <?php endif;?>
                     </ul>
 
+
+                    <!--- END OF TAB --->
+
+
+
+
                     <div class="investment__tab--content">
-                        <div id="airport" data-tab-content class="active">
+
+                        <?php
+query_posts(array(
+    'post_type' => 'investments',
+    'posts_per_page' => 1,
+    'orderby' => array(
+        'date' => 'ASC',
+    ),
+
+));?>
+                        <?php if (have_posts()): ?>
+                        <?php while (have_posts()): the_post();?>
+                        <div id="<?php the_field('tab_id');?>" data-tab-content class="active">
                             <div class="investment__tab--title">
-                                <h3>San Fernando Airport</h3>
-                                <p>
-                                    The San Fernando Airport continues to handle increasing traffic as a result of the
-                                    upgrading activities. 27 flying schools are using the airport for cross-country
-                                    training flights. For 2010, Aircraft Traffic was registered at 6,859 while Passenger
-                                    Traffic totaled 12,578.
-                                </p>
-                                <p>
-                                    With the completion of the Php488.167M upgrading project, South Korea ’s tourism and
-                                    aviation officials have expressed interest in utilizing the San Fernando Airport.
-                                </p>
+                                <h3><?php the_title();?></h3>
+                                <?php the_content();?>
                             </div>
+                            <?php
+    // using for loop, this is the one I'd prefer
+    $images = get_field('gallery');
+    if ($images) {
+        ?>
                             <div class="investment__tab--gallery">
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/airport/airport_1.png"
-                                        alt="San Fernando Airport">
+                                <?php
+    for ($i = 0; $i < count($images) && $i < 5; $i++) {
+            $image = $images[$i];
+            ?>
+                                <figure class="investment__tab--gallery--item <?php echo "tap" . $i; ?>">
+                                    <a href="<?php echo $image['url']; ?>">
+                                        <img src="<?php echo $image['sizes']['large']; ?>"
+                                            alt="<?php echo $image['alt']; ?>" />
+                                    </a>
+                                    <div class="img-icon">
+                                        <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_img.svg"
+                                            alt="Gallery Icon">
+                                    </div>
+                                    <p class="seemore">See More Photos</p>
                                 </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/airport/airport_2.png"
-                                        alt="San Fernando Airport">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/airport/airport_3.png"
-                                        alt="San Fernando Airport">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/airport/airport_4.png"
-                                        alt="San Fernando Airport">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/airport/airport_5.png"
-                                        alt="San Fernando Airport">
-                                </figure>
+                                <?php
+    }
+        ?>
                             </div>
-                        </div>
-                        <div id="seaport" data-tab-content>
-                            <div class="investment__tab--title">
-                                <h3>San Fernando International Seaport</h3>
-                                <p>
-                                    CAN ACCOMMODATE ALL TYPES OF VESSELS-Cruise Ships, Roll-On, Roll-Off (RORO) Vessel ,
-                                    Motor Tanker, Barges, Cargo Vessels, Motor Tugboat, and Fishing Boats (Motor Banca).
-                                </p>
-                            </div>
-                            <div class="investment__tab--gallery">
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/seaport/seaport_1.png"
-                                        alt="San Fernando International Seaport">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/seaport/seaport_2.png"
-                                        alt="San Fernando International Seaport">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/seaport/seaport_3.png"
-                                        alt="San Fernando International Seaport">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/seaport/seaport_4.png"
-                                        alt="San Fernando International Seaport">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/seaport/seaport_5.png"
-                                        alt="San Fernando International Seaport">
-                                </figure>
-                            </div>
-                            <div class="investment__tab--others">
-                                <div class="investment__tab--title">
-                                    <h3>Pier Structures</h3>
+                            <?php
+    }
+    ?>
+
+                            <div class="investment__gallery popup">
+                                <div class="investment__gallery--container">
+                                    <div class="investment__gallery--title">
+                                        <h3><?php the_title();?></h3>
+                                        <div class="close">
+                                            <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+                                                <path d="M15 0L1 14m14 0L1 0" stroke="#8E8E8E" fill="#8E8E8E"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <?php
+    $images = get_field('gallery');
+    if ($images): ?>
+                                    <div class="investment__gallery--row">
+                                        <?php foreach ($images as $image): ?>
+                                        <div class="investment__gallery--item">
+                                            <a href="<?php echo esc_url($image['url']); ?>">
+                                                <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                                                    alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            </a>
+
+                                        </div>
+                                        <?php endforeach;?>
+                                    </div>
+                                    <?php endif;?>
                                 </div>
-                                <ul class="others">
-                                    <li class="other__list">
-                                        Pier 1: 150 m x 21 m with a draft of 4 m to 15.1 m
-                                    </li>
-                                    <li class="other__list">
-                                        Pier 2: 200 m x 21 m with a draft of 4 m to 14.32 m
-                                    </li>
-                                    <li class="other__list">
-                                        BCC Pier: 200 m x 19 m
-                                    </li>
-                                </ul>
                             </div>
                         </div>
-                        <div id="mixed" data-tab-content>
+                        <?php endwhile;?>
+                        <?php else: ?>
+                        <?php endif;?>
+
+
+
+
+                        <?php
+query_posts(array(
+    'post_type' => 'investments',
+    'posts_per_page' => 5,
+    'offset' => 1,
+    'orderby' => array(
+        'date' => 'ASC',
+    ),
+
+));?>
+                        <?php if (have_posts()): ?>
+                        <?php while (have_posts()): the_post();?>
+                        <div id="<?php the_field('tab_id');?>" data-tab-content>
                             <div class="investment__tab--title">
-                                <h3>Mixed - Use Commercial Area</h3>
-                                <p>
-                                    PPMC has identified an area of three (3) hectares inside the Poro Point Freeport
-                                    Zone (PPFZ) as Mixed - Use Commercial Area, which can cater to commercial
-                                    enterprises and businesses and also to the growing Information Technology (IT) -
-                                    Business Process Outsourcing (BPO) Industry.
-                                </p>
+                                <h3><?php the_title();?></h3>
+                                <?php the_content();?>
                             </div>
+                            <?php
+    // using for loop, this is the one I'd prefer
+    $images = get_field('gallery');
+    if ($images) {
+        ?>
                             <div class="investment__tab--gallery">
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/mixed/mixed_1.png"
-                                        alt="Mixed - Use Commercial Area">
+                                <?php
+    for ($i = 0; $i < count($images) && $i < 5; $i++) {
+            $image = $images[$i];
+            ?>
+                                <figure class="investment__tab--gallery--item <?php echo "tap" . $i; ?>">
+                                    <a href="<?php echo $image['url']; ?>">
+                                        <img src="<?php echo $image['sizes']['large']; ?>"
+                                            alt="<?php echo $image['alt']; ?>" />
+                                    </a>
+                                    <div class="img-icon">
+                                        <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_img.svg"
+                                            alt="Gallery Icon">
+                                    </div>
+                                    <p class="seemore">See More Photos</p>
                                 </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/mixed/mixed_2.png"
-                                        alt="Mixed - Use Commercial Area">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/mixed/mixed_3.png"
-                                        alt="Mixed - Use Commercial Area">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/mixed/mixed_4.png"
-                                        alt="Mixed - Use Commercial Area">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/mixed/mixed_5.png"
-                                        alt="Mixed - Use Commercial Area">
-                                </figure>
+                                <?php
+    }
+        ?>
+                            </div>
+                            <?php
+    }
+    ?>
+
+                            <div class="investment__gallery popup">
+                                <div class="investment__gallery--container">
+                                    <div class="investment__gallery--title">
+                                        <h3><?php the_title();?></h3>
+                                        <div class="close">
+                                            <svg class="Icon Icon--close" role="presentation" viewBox="0 0 16 14">
+                                                <path d="M15 0L1 14m14 0L1 0" stroke="#8E8E8E" fill="#8E8E8E"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <?php
+    $images = get_field('gallery');
+    if ($images): ?>
+                                    <div class="investment__gallery--row">
+                                        <?php foreach ($images as $image): ?>
+                                        <div class="investment__gallery--item">
+                                            <a href="<?php echo esc_url($image['url']); ?>">
+                                                <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                                                    alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            </a>
+
+                                        </div>
+                                        <?php endforeach;?>
+                                    </div>
+                                    <?php endif;?>
+                                </div>
                             </div>
                         </div>
-                        <div id="tourism" data-tab-content>
-                            <div class="investment__tab--title">
-                                <h3>Tourism Complex</h3>
-                                <p>
-                                    The development of the 65.5 hectares Tourism Complex was awarded to Thunderbird
-                                    Pilipinas Hotels and Resorts, Inc., which opened for business the following:
-                                </p>
-                            </div>
-                            <div class="investment__tab--gallery">
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/tourism/tourism_1.png"
-                                        alt="Tourism Complex">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/tourism/tourism_2.png"
-                                        alt="Tourism Complex">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/tourism/tourism_3.png"
-                                        alt="Tourism Complex">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/tourism/tourism_4.png"
-                                        alt="Tourism Complex">
-                                </figure>
-                                <figure class="investment__tab--gallery--item">
-                                    <img src="<?php echo THEME_DIR; ?>/assets/img/investment/tourism/tourism_5.png"
-                                        alt="Tourism Complex">
-                                </figure>
-                            </div>
-                            <div class="bottom-text">
-                                <p>
-                                    Thunderbird has started its first Real Estate Project in Asia that aims to be the
-                                    premiere leisure and wellness residential community in Northern Luzon - The Point
-                                    Residences.
-                                </p>
-                                <p>
-                                    The Point Residences is a fifteen(15) - hectare development within the sixty - five
-                                    and a half (65.5) hectares Tourism Complex leased to Thunderbird.
-                                </p>
-                            </div>
-                        </div>
+                        <?php endwhile;?>
+                        <?php else: ?>
+                        <?php endif;?>
+
+
+
                     </div>
 
                 </div>

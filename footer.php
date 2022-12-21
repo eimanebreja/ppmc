@@ -188,6 +188,21 @@ $('#load-more').on('click', function() {
 });
 </script>
 
+
+<script>
+$(document).ready(function() {
+    $('.tap4').click(function() {
+        console.log("Tap Open");
+        $(this).parent().next('.popup').addClass('open');
+    });
+    $('.close').click(function(e) {
+        e.preventDefault();
+        console.log("Tap Close");
+        $(".popup").removeClass("open");
+    });
+});
+</script>
+
 <?php wp_footer();?>
 </body>
 
