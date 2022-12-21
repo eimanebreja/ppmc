@@ -40,7 +40,7 @@ function news_custom_post_type()
 {
     register_post_type('news',
         array(
-            'rewrite' => array('slug' => 'news'),
+            'rewrite' => array('slug' => 'new'),
             'labels' => array(
                 'name' => 'News',
                 'singular_name' => 'News',
@@ -128,6 +128,29 @@ function procurement_custom_post_type()
 }
 add_action('init', 'procurement_custom_post_type');
 
+function project_custom_post_type()
+{
+    register_post_type('project',
+        array(
+            'rewrite' => array('slug' => 'project'),
+            'labels' => array(
+                'name' => 'Project',
+                'singular_name' => 'Projects',
+                'add_new_item' => 'Add New Project',
+                'edit_item' => 'Edit Project',
+            ),
+            'menu-icon' => 'dashicons-clipboard',
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                'title', 'thumbnail', 'editor', 'excerpt', 'comments',
+            ),
+            'taxonomies' => array('post_tag'),
+        )
+    );
+}
+add_action('init', 'project_custom_post_type');
+
 /**
  * Comment Form Placeholder Author, Email, URL
  */
@@ -182,3 +205,38 @@ function wpb_move_comment_field_to_bottom($fields)
 }
 
 add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
+
+function weichie_load_more()
+{
+    $ajaxposts = new WP_Query([
+        'post_type' => 'publications',
+        'posts_per_page' => 6,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'paged' => $_POST['paged'],
+    ]);
+
+    $response = '';
+    $max_pages = $ajaxposts->max_num_pages;
+
+    if ($ajaxposts->have_posts()) {
+        ob_start();
+        while ($ajaxposts->have_posts()): $ajaxposts->the_post();
+            $response .= the_title();
+        endwhile;
+        $output = ob_get_contents();
+        ob_end_clean();
+    } else {
+        $response = '';
+    }
+
+    $result = [
+        'max' => $max_pages,
+        'html' => $output,
+    ];
+
+    echo json_encode($result);
+    exit;
+}
+add_action('wp_ajax_weichie_load_more', 'weichie_load_more');
+add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more');

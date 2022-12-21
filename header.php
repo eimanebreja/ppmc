@@ -105,7 +105,8 @@
                                 <a href="" class="nav__bottomarea--link">Downloadables</a>
                             </li>
                             <li class="nav__bottomarea--list">
-                                <a href="" class="nav__bottomarea--link">News and Updates</a>
+                                <a href="<?php echo site_url('/news'); ?>" class="nav__bottomarea--link">News and
+                                    Updates</a>
                             </li>
                             <li class="nav__bottomarea--list">
                                 <a href="" class="nav__bottomarea--link">Contact</a>

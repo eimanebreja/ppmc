@@ -166,7 +166,26 @@ $(document).ready(function() {
 </script>
 
 <script>
+let currentPage = 1;
+$('#load-more').on('click', function() {
+    currentPage++; // Do currentPage + 1, because we want to load the next page
 
+    $.ajax({
+        type: 'POST',
+        url: '/wp-admin/admin-ajax.php',
+        dataType: 'json',
+        data: {
+            action: 'weichie_load_more',
+            paged: currentPage,
+        },
+        success: function(res) {
+            if (paged >= res.max) {
+                $('#load-more').hide();
+            }
+            $('.project__content--row').append(res);
+        }
+    });
+});
 </script>
 
 <?php wp_footer();?>
