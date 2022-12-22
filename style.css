@@ -12,10 +12,3 @@ Tags: blog, one-column, two-columns, right-sidebar, custom-header, custom-menu, 
 Text Domain: twentythirteen
 
 */
-
-.container {
-    max-width: 1200px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin: 0 auto;
-}

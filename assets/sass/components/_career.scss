@@ -114,8 +114,8 @@
             transform: scale(0.9);
           }
         }
-        &.downloads {
-          background-color: #1c9f58;
+        &.downloadbtn {
+          background-color: #1c9f58 !important;
           position: relative;
           &::after {
             content: url(../img/icon/ic_file.svg);
@@ -188,7 +188,7 @@
               transform: scale(0.7);
             }
           }
-          &.downloads {
+          &.downloadbtn {
             &::after {
               top: 7px;
               left: 12px;

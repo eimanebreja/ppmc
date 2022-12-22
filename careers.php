@@ -43,7 +43,7 @@ if (have_posts()): ?>
     if ($file):
         $url = wp_get_attachment_url($file);?>
                         <a href="<?php echo $file['url']; ?>" target="_blank" class="btn preview">Preview</a>
-                        <a href="<?php echo $file['url']; ?>" class="btn downloads" download>Download</a>
+                        <a href="<?php echo $file['url']; ?>" class="btn downloadbtn" download>Download</a>
                         <?php endif;?>
                     </div>
                 </div>
