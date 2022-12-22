@@ -230,8 +230,8 @@ body {
   .nav__bottomarea--moremenu {
     height: 45px; }
   .nav__bottomarea--list {
-    padding-left: 40px;
-    padding-right: 25px; }
+    padding-left: 30px;
+    padding-right: 20px; }
   .nav__bottomarea--link {
     font-size: 14px; } }
 .homebanner {
@@ -2306,10 +2306,10 @@ body {
             left: 10px;
             display: block;
             transform: scale(0.9); }
-        .career__content--btn .btn.download {
+        .career__content--btn .btn.downloads {
           background-color: #1c9f58;
           position: relative; }
-          .career__content--btn .btn.download::after {
+          .career__content--btn .btn.downloads::after {
             content: url(../img/icon/ic_file.svg);
             position: absolute;
             top: 10px;
@@ -2355,7 +2355,7 @@ body {
             top: 7px;
             left: 12px;
             transform: scale(0.7); }
-          .career__content--btn .btn.download::after {
+          .career__content--btn .btn.downloads::after {
             top: 7px;
             left: 12px;
             transform: scale(0.7); } }

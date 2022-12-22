@@ -114,7 +114,7 @@
             transform: scale(0.9);
           }
         }
-        &.download {
+        &.downloads {
           background-color: #1c9f58;
           position: relative;
           &::after {
@@ -188,7 +188,7 @@
               transform: scale(0.7);
             }
           }
-          &.download {
+          &.downloads {
             &::after {
               top: 7px;
               left: 12px;
