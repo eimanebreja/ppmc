@@ -177,6 +177,8 @@ body {
     padding-left: 45px;
     padding-right: 30px;
     list-style: none; }
+  .nav__bottomarea .active {
+    color: #2b318c !important; }
   .nav__bottomarea--link {
     font-size: 15px;
     font-family: "Roboto-Medium";
@@ -2208,6 +2210,285 @@ body {
         .gad__content--body ul li {
           padding-top: 10px;
           font-size: 16px; } }
+.career {
+  padding-top: 210px;
+  padding-bottom: 30px; }
+  .career__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .career__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center; }
+    .career__banner--title h2 {
+      font-size: 48px;
+      font-family: "Roboto-Medium";
+      font-weight: 500;
+      color: #ffffff; }
+  .career__content {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+    .career__content--header {
+      padding-bottom: 20px; }
+      .career__content--header h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 48px; }
+    .career__content--body {
+      padding-top: 50px; }
+    .career__content--item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #f7f7f7;
+      border-left: 1px solid #f7f7f7;
+      border-right: 1px solid #f7f7f7;
+      background-color: #ffffff;
+      padding-top: 34px;
+      padding-bottom: 34px;
+      padding-left: 30px;
+      padding-right: 30px;
+      transition: 0.3s ease; }
+      .career__content--item:first-child {
+        border-top: 1px solid #f7f7f7; }
+      .career__content--item:hover {
+        transition: 0.3s ease;
+        background-color: #f7f7f7; }
+    .career__content--title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .career__content--title .title-icon img {
+        display: block;
+        width: 47px; }
+      .career__content--title .title-area {
+        padding-left: 20px;
+        font-family: "Roboto-Regular";
+        color: #000000;
+        font-size: 20px; }
+    .career__content--btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 30px; }
+      .career__content--btn .btn {
+        width: 141px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: "Roboto-Regular";
+        padding-left: 10px;
+        transition: 0.3s ease; }
+        .career__content--btn .btn:hover {
+          text-decoration: none;
+          opacity: 0.7;
+          transition: 0.3s ease; }
+        .career__content--btn .btn.preview {
+          background-color: #f79f27;
+          position: relative; }
+          .career__content--btn .btn.preview::after {
+            content: url(../img/icon/ic_search.svg);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+            transform: scale(0.9); }
+        .career__content--btn .btn.download {
+          background-color: #1c9f58;
+          position: relative; }
+          .career__content--btn .btn.download::after {
+            content: url(../img/icon/ic_file.svg);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+            transform: scale(0.9); }
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .career {
+    padding-top: 190px;
+    padding-bottom: 30px; }
+    .career__container {
+      max-width: 1300px; }
+    .career__banner {
+      height: 280px; }
+      .career__banner--title h2 {
+        font-size: 38px; }
+    .career__content {
+      padding-top: 40px;
+      padding-bottom: 90px; }
+      .career__content--header {
+        padding-bottom: 10px; }
+        .career__content--header h3 {
+          font-size: 38px; }
+      .career__content--item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px; }
+      .career__content--title .title-icon img {
+        width: 40px; }
+      .career__content--title .title-area {
+        padding-left: 15px;
+        font-size: 18px; }
+      .career__content--btn {
+        gap: 25px; }
+        .career__content--btn .btn {
+          width: 138px;
+          height: 42px;
+          font-size: 13px;
+          padding-left: 10px; }
+          .career__content--btn .btn.preview::after {
+            top: 7px;
+            left: 12px;
+            transform: scale(0.7); }
+          .career__content--btn .btn.download::after {
+            top: 7px;
+            left: 12px;
+            transform: scale(0.7); } }
+.download {
+  padding-top: 210px;
+  padding-bottom: 30px; }
+  .download__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .download__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center; }
+    .download__banner--title h2 {
+      font-size: 48px;
+      font-family: "Roboto-Medium";
+      font-weight: 500;
+      color: #ffffff; }
+  .download__content {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+    .download__content--header {
+      padding-bottom: 20px; }
+      .download__content--header h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 48px; }
+    .download__content--category {
+      padding-top: 30px; }
+      .download__content--category .category-form__label {
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding-bottom: 20px; }
+      .download__content--category .category-form select {
+        border-top: 0px solid #1a7dc3;
+        border-bottom: 1px solid #1a7dc3;
+        border-left: 0px solid #1a7dc3;
+        border-right: 0px solid #1a7dc3;
+        width: 223px;
+        height: 33px;
+        font-family: "Roboto-Light";
+        font-size: 20px;
+        color: #1a7dc3; }
+    .download__content--row {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      gap: 38px; }
+    .download__content--item {
+      border: 1px solid #ebedee; }
+    .download__content--title {
+      padding-left: 50px;
+      padding-right: 30px;
+      font-size: 20px;
+      font-family: "Roboto-Light";
+      color: #1a7dc3;
+      height: 122px;
+      display: flex;
+      align-items: center; }
+    .download__content--link {
+      border-top: 1px solid #ebedee;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 30px; }
+      .download__content--link a {
+        font-size: 16px;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        position: relative;
+        display: block;
+        padding-right: 30px; }
+        .download__content--link a::after {
+          content: url(../img/icon/ic_download_blue.svg);
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          display: block; }
+        .download__content--link a:hover {
+          text-decoration: none; }
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .download {
+    padding-top: 190px;
+    padding-bottom: 30px; }
+    .download__container {
+      max-width: 1300px; }
+    .download__banner {
+      height: 280px; }
+      .download__banner--title h2 {
+        font-size: 38px; }
+    .download__content {
+      padding-top: 40px;
+      padding-bottom: 90px; }
+      .download__content--header {
+        padding-bottom: 10px; }
+        .download__content--header h3 {
+          font-size: 38px; }
+      .download__content--category {
+        padding-top: 27px; }
+        .download__content--category .category-form__label {
+          font-size: 18px;
+          padding-bottom: 17px; }
+        .download__content--category .category-form select {
+          width: 223px;
+          height: 33px;
+          font-size: 18px; }
+      .download__content--row {
+        margin-top: 45px;
+        gap: 32px; }
+      .download__content--title {
+        padding-left: 35px;
+        padding-right: 25px;
+        font-size: 18px; }
+      .download__content--link {
+        padding-left: 35px;
+        padding-right: 25px; }
+        .download__content--link a {
+          font-size: 14px;
+          padding-right: 25px; } }
 .csr {
   padding-top: 210px;
   padding-bottom: 30px; }
@@ -2466,7 +2747,7 @@ body {
         padding-top: 20px;
         font-size: 16px; }
       .csr__project--seemore {
-        max-width: 127px; }
+        max-width: 117px; }
         .csr__project--seemore a {
           font-size: 14px; } }
 .company-ft {

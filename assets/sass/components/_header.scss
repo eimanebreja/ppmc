@@ -177,11 +177,15 @@
       padding-right: 30px;
       list-style: none;
     }
+    .active {
+      color: #2b318c !important;
+    }
     &--link {
       font-size: 15px;
       font-family: $r-medium;
       color: $white !important;
       display: flex;
+
       &:hover {
         text-decoration: none;
       }

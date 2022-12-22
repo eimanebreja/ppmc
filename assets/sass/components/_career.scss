@@ -1,0 +1,202 @@
+.career {
+  padding-top: 210px;
+  padding-bottom: 30px;
+  &__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center;
+
+    &--title {
+      h2 {
+        font-size: 48px;
+        font-family: $r-medium;
+        font-weight: 500;
+        color: $white;
+      }
+    }
+  }
+  &__content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    &--header {
+      padding-bottom: 20px;
+      h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: $r-light;
+        color: $blue;
+        font-size: 48px;
+      }
+    }
+    &--body {
+      padding-top: 50px;
+    }
+    &--item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #f7f7f7;
+      border-left: 1px solid #f7f7f7;
+      border-right: 1px solid #f7f7f7;
+      background-color: $white;
+      padding-top: 34px;
+      padding-bottom: 34px;
+      padding-left: 30px;
+      padding-right: 30px;
+      transition: 0.3s ease;
+      &:first-child {
+        border-top: 1px solid #f7f7f7;
+      }
+      &:hover {
+        transition: 0.3s ease;
+        background-color: #f7f7f7;
+      }
+    }
+    &--title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .title-icon {
+        img {
+          display: block;
+          width: 47px;
+        }
+      }
+      .title-area {
+        padding-left: 20px;
+        font-family: $r-regular;
+        color: $black;
+        font-size: 20px;
+      }
+    }
+    &--btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 30px;
+      .btn {
+        width: 141px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-size: 14px;
+        font-family: $r-regular;
+        padding-left: 10px;
+        transition: 0.3s ease;
+        &:hover {
+          text-decoration: none;
+          opacity: 0.7;
+          transition: 0.3s ease;
+        }
+        &.preview {
+          background-color: #f79f27;
+          position: relative;
+          &::after {
+            content: url(../img/icon/ic_search.svg);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+            transform: scale(0.9);
+          }
+        }
+        &.download {
+          background-color: #1c9f58;
+          position: relative;
+          &::after {
+            content: url(../img/icon/ic_file.svg);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .career {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &--title {
+        .title-icon {
+          img {
+            width: 40px;
+          }
+        }
+        .title-area {
+          padding-left: 15px;
+          font-size: 18px;
+        }
+      }
+      &--btn {
+        gap: 25px;
+        .btn {
+          width: 138px;
+          height: 42px;
+          font-size: 13px;
+          padding-left: 10px;
+
+          &.preview {
+            &::after {
+              top: 7px;
+              left: 12px;
+              transform: scale(0.7);
+            }
+          }
+          &.download {
+            &::after {
+              top: 7px;
+              left: 12px;
+              transform: scale(0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+}

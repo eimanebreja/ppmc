@@ -1,0 +1,173 @@
+.download {
+  padding-top: 210px;
+  padding-bottom: 30px;
+  &__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center;
+
+    &--title {
+      h2 {
+        font-size: 48px;
+        font-family: $r-medium;
+        font-weight: 500;
+        color: $white;
+      }
+    }
+  }
+  &__content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    &--header {
+      padding-bottom: 20px;
+      h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: $r-light;
+        color: $blue;
+        font-size: 48px;
+      }
+    }
+    &--category {
+      padding-top: 30px;
+      .category-form {
+        &__label {
+          font-family: $r-light;
+          color: $blue;
+          font-size: 20px;
+          text-transform: uppercase;
+          padding-bottom: 20px;
+        }
+        select {
+          border-top: 0px solid $blue;
+          border-bottom: 1px solid $blue;
+          border-left: 0px solid $blue;
+          border-right: 0px solid $blue;
+          width: 223px;
+          height: 33px;
+          font-family: $r-light;
+          font-size: 20px;
+          color: $blue;
+        }
+      }
+    }
+    &--row {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      gap: 38px;
+    }
+    &--item {
+      border: 1px solid #ebedee;
+    }
+    &--title {
+      padding-left: 50px;
+      padding-right: 30px;
+      font-size: 20px;
+      font-family: $r-light;
+      color: $blue;
+      height: 122px;
+      display: flex;
+      align-items: center;
+    }
+    &--link {
+      border-top: 1px solid #ebedee;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 30px;
+      a {
+        font-size: 16px;
+        font-family: $r-light;
+        color: $blue;
+        position: relative;
+        display: block;
+        padding-right: 30px;
+        &::after {
+          content: url(../img/icon/ic_download_blue.svg);
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          display: block;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .download {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--category {
+        padding-top: 27px;
+        .category-form {
+          &__label {
+            font-size: 18px;
+            padding-bottom: 17px;
+          }
+          select {
+            width: 223px;
+            height: 33px;
+            font-size: 18px;
+          }
+        }
+      }
+      &--row {
+        margin-top: 45px;
+        gap: 32px;
+      }
+
+      &--title {
+        padding-left: 35px;
+        padding-right: 25px;
+        font-size: 18px;
+      }
+      &--link {
+        padding-left: 35px;
+        padding-right: 25px;
+        a {
+          font-size: 14px;
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+}

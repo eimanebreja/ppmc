@@ -59,15 +59,16 @@
     echo "active";}?>">Investment Opportunities</a>
                             </li>
                             <li class="nav__middlearea--list">
-                                <a href="<?php echo site_url('/procurements'); ?>" class="nav__middlearea--link <?php if (is_page('procurements')) {
+                                <a href="<?php echo site_url('/procurements'); ?>" class="nav__middlearea--link <?php if ((is_page('procurements')) || (is_single() && 'procurement' == get_post_type())) {
     echo "active";}?>">Procurement</a>
                             </li>
                             <li class="nav__middlearea--list">
-                                <a href="<?php echo site_url('/projects'); ?>" class="nav__middlearea--link <?php if (is_page('projects')) {
+                                <a href="<?php echo site_url('/projects'); ?>" class="nav__middlearea--link <?php if ((is_page('projects')) || (is_single() && 'project' == get_post_type())) {
     echo "active";}?>">Projects</a>
                             </li>
                             <li class="nav__middlearea--list">
-                                <a href="" class="nav__middlearea--link">
+                                <a href="<?php echo site_url('/csr'); ?>" class="nav__middlearea--link  <?php if (is_page('csr')) {
+    echo "active";}?>">
                                     Corporate Social Responsibility
                                 </a>
                             </li>
@@ -108,20 +109,26 @@ if (false !== $response_json) {
                         </div>
                         <ul class=" nav__bottomarea--moremenu" style="display:none">
                             <li class="nav__bottomarea--list">
-                                <a href="<?php echo site_url('/gad'); ?>" class="nav__bottomarea--link">GAD</a>
+                                <a href="<?php echo site_url('/gad'); ?>" class="nav__bottomarea--link <?php if (is_page('gad')) {
+    echo "active";}?>">GAD</a>
                             </li>
                             <li class="nav__bottomarea--list">
                                 <a href="" class="nav__bottomarea--link">Book your Events</a>
                             </li>
                             <li class="nav__bottomarea--list">
-                                <a href="" class="nav__bottomarea--link">Careers</a>
+                                <a href="<?php echo site_url('/careers'); ?>" class="nav__bottomarea--link <?php if (is_page('careers')) {
+    echo "active";}?>">Careers</a>
                             </li>
                             <li class="nav__bottomarea--list">
-                                <a href="" class="nav__bottomarea--link">Downloadables</a>
+                                <a href="<?php echo site_url('/downloadables'); ?>" class="nav__bottomarea--link <?php if (is_page('downloadables')) {
+    echo "active";}?>">Downloadables</a>
                             </li>
                             <li class="nav__bottomarea--list">
-                                <a href="<?php echo site_url('/news'); ?>" class="nav__bottomarea--link">News and
-                                    Updates</a>
+                                <a href="<?php echo site_url('/news'); ?>" class="nav__bottomarea--link <?php if ((is_page('news')) || (is_single() && 'news' == get_post_type())) {
+    echo "active";}?>">News and Updates</a>
+                            </li>
+                            <li class="nav__bottomarea--list">
+                                <a href="" class="nav__bottomarea--link">Gallery</a>
                             </li>
                             <li class="nav__bottomarea--list">
                                 <a href="" class="nav__bottomarea--link">Contact</a>
