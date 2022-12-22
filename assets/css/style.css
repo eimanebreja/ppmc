@@ -2489,6 +2489,152 @@ body {
         .download__content--link a {
           font-size: 14px;
           padding-right: 25px; } }
+.faq {
+  padding-top: 210px;
+  padding-bottom: 30px; }
+  .faq__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .faq__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center; }
+    .faq__banner--title h2 {
+      font-size: 48px;
+      font-family: "Roboto-Medium";
+      font-weight: 500;
+      color: #ffffff; }
+  .faq__content {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+    .faq__content--header {
+      padding-bottom: 20px; }
+      .faq__content--header h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 48px; }
+    .faq__content--body {
+      padding-top: 30px; }
+    .faq__content--question {
+      margin-top: 27px;
+      background-color: #1a7dc3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 25px 50px; }
+      .faq__content--question .question-title {
+        font-size: 24px;
+        color: #ffffff;
+        font-family: "Roboto-Regular"; }
+      .faq__content--question .question-arrow img {
+        width: 24px;
+        display: block; }
+    .faq__content--answer {
+      font-size: 18px;
+      font-family: "Roboto-Light";
+      color: #000000;
+      padding: 37px 50px; }
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .faq {
+    padding-top: 190px;
+    padding-bottom: 30px; }
+    .faq__container {
+      max-width: 1300px; }
+    .faq__banner {
+      height: 280px; }
+      .faq__banner--title h2 {
+        font-size: 38px; }
+    .faq__content {
+      padding-top: 40px;
+      padding-bottom: 90px; }
+      .faq__content--header {
+        padding-bottom: 10px; }
+        .faq__content--header h3 {
+          font-size: 38px; }
+      .faq__content--body {
+        padding-top: 30px; }
+      .faq__content--question {
+        margin-top: 24px;
+        padding: 20px 40px; }
+        .faq__content--question .question-title {
+          font-size: 20px; }
+        .faq__content--question .question-arrow img {
+          width: 22px; }
+      .faq__content--answer {
+        padding: 27px 30px; } }
+.citizen {
+  padding-top: 210px;
+  padding-bottom: 30px; }
+  .citizen__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .citizen__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center; }
+    .citizen__banner--title h2 {
+      font-size: 48px;
+      font-family: "Roboto-Medium";
+      font-weight: 500;
+      color: #ffffff; }
+  .citizen__content {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+    .citizen__content--header {
+      padding-bottom: 20px; }
+      .citizen__content--header h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 48px; }
+    .citizen__content--body {
+      padding-top: 80px; }
+      .citizen__content--body object {
+        width: 100%;
+        height: 827px; }
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .citizen {
+    padding-top: 190px;
+    padding-bottom: 30px; }
+    .citizen__container {
+      max-width: 1300px; }
+    .citizen__banner {
+      height: 280px; }
+      .citizen__banner--title h2 {
+        font-size: 38px; }
+    .citizen__content {
+      padding-top: 40px;
+      padding-bottom: 90px; }
+      .citizen__content--header {
+        padding-bottom: 10px; }
+        .citizen__content--header h3 {
+          font-size: 38px; }
+      .citizen__content--body {
+        padding-top: 40px; }
+        .citizen__content--body object {
+          width: 100%;
+          height: 700px; } }
 .csr {
   padding-top: 210px;
   padding-bottom: 30px; }
