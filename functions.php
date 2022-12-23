@@ -63,7 +63,7 @@ function gallery_custom_post_type()
 {
     register_post_type('gallery',
         array(
-            'rewrite' => array('slug' => 'gallery'),
+            'rewrite' => array('slug' => 'galleries'),
             'labels' => array(
                 'name' => 'Gallery',
                 'singular_name' => 'Gallery',

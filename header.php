@@ -52,7 +52,8 @@
     echo "active";}?>">Home</a>
                             </li>
                             <li class="nav__middlearea--list">
-                                <a href="" class="nav__middlearea--link">About Us</a>
+                                <a href="<?php echo site_url('/about-us'); ?>" class="nav__middlearea--link <?php if (is_page('about-us')) {
+    echo "active";}?>">About Us</a>
                             </li>
                             <li class="nav__middlearea--list">
                                 <a href="<?php echo site_url('/investment-opportunities'); ?>" class="nav__middlearea--link <?php if (is_page('investment-opportunities')) {
@@ -128,10 +129,12 @@ if (false !== $response_json) {
     echo "active";}?>">News and Updates</a>
                             </li>
                             <li class="nav__bottomarea--list">
-                                <a href="" class="nav__bottomarea--link">Gallery</a>
+                                <a href="<?php echo site_url('/gallery'); ?>" class="nav__bottomarea--link <?php if (is_page('gallery')) {
+    echo "active";}?>">Gallery</a>
                             </li>
                             <li class="nav__bottomarea--list">
-                                <a href="" class="nav__bottomarea--link">Contact</a>
+                                <a href="<?php echo site_url('/contact-us'); ?>" class="nav__bottomarea--link <?php if (is_page('contact-us')) {
+    echo "active";}?>">Contact</a>
                             </li>
                         </ul>
                     </div>

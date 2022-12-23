@@ -75,13 +75,13 @@ if (have_posts()): ?>
                             <a href="" class="viewmore">Read more</a>
                         </div>
                     </div>
-                    <a href="" class="homenews__about--morelink">
+                    <a href="<?php echo site_url('/citizens-charter'); ?>" class="homenews__about--morelink">
                         CITIZEN’S CHARTER
                     </a>
-                    <a href="" class="homenews__about--morelink">
+                    <a href="<?php echo site_url('/faqs'); ?>" class="homenews__about--morelink">
                         FAQs
                     </a>
-                    <a href="" class="homenews__about--morelink">
+                    <a href="<?php echo site_url('/privacy-notice'); ?>" class="homenews__about--morelink">
                         PRIVACY NOTICE
                     </a>
 
@@ -175,65 +175,36 @@ if (have_posts()): ?>
                     <a href="<?php echo site_url('/gallery'); ?>">View more galllery</a>
                 </div>
             </div>
-            <div class="homegallery__row">
-                <div class="homegallery__item large">
-                    <div class="homegallery__item--img">
-                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_1.png" alt="Algacon Aquafeeds">
-                    </div>
-                    <div class="homegallery__item--title">
-                        <p>Algacon Aquafeeds</p>
-                    </div>
-                </div>
-                <div class="homegallery__item small">
-                    <div class="homegallery__item--img">
-                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_2.png" alt="Consectetuer adipiscing">
-                    </div>
-                    <div class="homegallery__item--title">
-                        <p>Consectetuer adipiscing</p>
-                    </div>
-                </div>
-                <div class="homegallery__item small">
-                    <div class="homegallery__item--img">
-                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_3.png" alt="Station ullamcorper">
-                    </div>
-                    <div class="homegallery__item--title">
-                        <p>Station ullamcorper</p>
-                    </div>
-                </div>
-                <div class="homegallery__item large">
-                    <div class="homegallery__item--img">
-                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_4.png" alt="Nostrud exerci tation">
-                    </div>
-                    <div class="homegallery__item--title">
-                        <p>Nostrud exerci tation</p>
-                    </div>
-                </div>
-                <div class="homegallery__item small">
-                    <div class="homegallery__item--img">
-                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_5.png" alt="Suscipit lobortis nisl">
-                    </div>
-                    <div class="homegallery__item--title">
-                        <p>Suscipit lobortis nisl</p>
-                    </div>
-                </div>
-                <div class="homegallery__item small">
-                    <div class="homegallery__item--img">
-                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_6.png" alt="Dolor sit amet">
-                    </div>
-                    <div class="homegallery__item--title">
-                        <p>Dolor sit amet</p>
-                    </div>
-                </div>
-                <div class="homegallery__item small">
-                    <div class="homegallery__item--img">
-                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_7.png" alt="Sullamcorper suscipit">
-                    </div>
-                    <div class="homegallery__item--title">
-                        <p>Sullamcorper suscipit</p>
-                    </div>
-                </div>
+            <?php
+query_posts(array(
+    'post_type' => 'gallery',
+    'posts_per_page' => 7,
+));
 
+if (have_posts()): ?>
+
+            <div class="homegallery__row">
+                <?php while (have_posts()): the_post();?>
+                <a href="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>"
+                    class="homegallery__item <?php the_field('image_size');?>">
+                    <div class="homegallery__item--img">
+                        <?php if (has_post_thumbnail()) {
+        the_post_thumbnail();
+    } else {?>
+                        <img src="<?php echo THEME_DIR; ?>/assets/img/gallery_1.png" alt="Algacon Aquafeeds">
+                        <?php }?>
+                    </div>
+                    <div class="homegallery__item--title">
+                        <p><?php the_title();?></p>
+                    </div>
+                </a>
+                <?php endwhile;?>
             </div>
+            <?php else: ?>
+            <div class="no-result">
+                <h1>No results found</h1>
+            </div>
+            <?php endif;?>
         </div>
     </div>
 </section>
