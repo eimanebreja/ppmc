@@ -88,7 +88,7 @@
                             <div class="status">
                             </div>
                             <div class="conversion">
-                                <?php
+                                <!-- <?php
 $req_url = 'https://v6.exchangerate-api.com/v6/cd86f7c7785e92c722d8ea5d/latest/USD';
 $response_json = file_get_contents($req_url);
 if (false !== $response_json) {
@@ -101,7 +101,7 @@ if (false !== $response_json) {
     } catch (Exception $e) {
     }
 }
-?>
+?> -->
                                 1 USD = <?php echo $PHP_price; ?> PHP
                             </div>
                             <div class="date">

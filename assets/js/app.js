@@ -14,3 +14,14 @@ tabs.forEach((tab) => {
     target.classList.add("active");
   });
 });
+
+setTimeout(() => {
+  const message = document.getElementById("message");
+  // 👇️ removes element from DOM
+  message.style.opacity = "0";
+  message.style.display = "none";
+  message.style.transition = "all 2s";
+
+  // 👇️ hides element (still takes up space on page)
+  // box.style.visibility = 'hidden';
+}, 3000); // 👈️ time in milliseconds

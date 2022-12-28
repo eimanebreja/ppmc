@@ -86,7 +86,7 @@ function events_custom_post_type()
 {
     register_post_type('event',
         array(
-            'rewrite' => array('slug' => 'events'),
+            'rewrite' => array('slug' => 'event'),
             'labels' => array(
                 'name' => 'Events',
                 'singular_name' => 'Events',
@@ -198,6 +198,29 @@ function career_custom_post_type()
     );
 }
 add_action('init', 'career_custom_post_type');
+
+function booking_custom_post_type()
+{
+    register_post_type('booking',
+        array(
+            'rewrite' => array('slug' => 'booking'),
+            'labels' => array(
+                'name' => 'Events Booking',
+                'singular_name' => 'Events Booking',
+                'add_new_item' => 'Add New Events Booking',
+                'edit_item' => 'Edit Events Booking',
+            ),
+            'menu-icon' => 'dashicons-clipboard',
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                'title', 'thumbnail', 'editor', 'excerpt', 'comments',
+            ),
+            'taxonomies' => array('post_tag'),
+        )
+    );
+}
+add_action('init', 'booking_custom_post_type');
 
 /**
  * Comment Form Placeholder Author, Email, URL
