@@ -114,7 +114,8 @@ if (false !== $response_json) {
     echo "active";}?>">GAD</a>
                             </li>
                             <li class="nav__bottomarea--list">
-                                <a href="" class="nav__bottomarea--link">Book your Events</a>
+                                <a href="<?php echo site_url('/events'); ?>" class="nav__bottomarea--link <?php if (is_page('events')) {
+    echo "active";}?>">Book your Events</a>
                             </li>
                             <li class="nav__bottomarea--list">
                                 <a href="<?php echo site_url('/careers'); ?>" class="nav__bottomarea--link <?php if (is_page('careers')) {

@@ -223,6 +223,35 @@ function booking_custom_post_type()
 add_action('init', 'booking_custom_post_type');
 
 /**
+ * Reseervation Exist Validation
+ */
+
+add_filter('acf/validate_value/name=reservation_date', 'validate_reservation_filter', 10, 4);
+
+function validate_reservation_filter($valid, $value, $field, $input)
+{
+    if (!$valid || $value == '') {
+        return $valid;
+    }
+    global $post;
+    $args = array(
+        'post_type' => 'booking',
+        'post__not_in' => array($post->ID), // do not check this new post
+        'meta_query' => array(
+            array(
+                'key' => 'reservation_date',
+                'value' => $value,
+            ),
+        ),
+    );
+    $query = new WP_Query($args);
+    if (count($query->posts)) {
+        $valid = 'There is already a booking using this reservation date';
+    }
+    return $valid;
+}
+
+/**
  * Comment Form Placeholder Author, Email, URL
  */
 function placeholder_author_email_url_form_fields($fields)
