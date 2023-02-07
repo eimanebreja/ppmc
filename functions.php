@@ -32,6 +32,20 @@ function enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
+add_action('wp_enqueue_scripts', 'add_my_script');
+function add_my_script()
+{
+    wp_enqueue_script('jquery_min_script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+    // wp_enqueue_script('jquery'); // Explicitly telling wordpress to load jquery
+    wp_enqueue_script(
+        'your-script',
+        get_stylesheet_directory_uri() . '/assets/js/app.js',
+        array('jquery'),
+        1.5, // put the version of your script here
+        true// This will make sure that your script will be loaded in the footer
+    );
+}
+
 /**
  * NEWS CUSTOM POST
  */
@@ -54,6 +68,7 @@ function news_custom_post_type()
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
             'taxonomies' => array('post_tag'),
+            'menu_position' => 4,
         )
     );
 }
@@ -77,6 +92,7 @@ function gallery_custom_post_type()
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
             'taxonomies' => array('post_tag'),
+            'menu_position' => 5,
         )
     );
 }
@@ -100,6 +116,7 @@ function events_custom_post_type()
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
             'taxonomies' => array('post_tag'),
+            'menu_position' => 6,
         )
     );
 }
@@ -123,6 +140,7 @@ function procurement_custom_post_type()
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
             'taxonomies' => array('post_tag'),
+            'menu_position' => 7,
         )
     );
 }
@@ -146,6 +164,7 @@ function project_custom_post_type()
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
             'taxonomies' => array('post_tag'),
+            'menu_position' => 8,
         )
     );
 }
@@ -171,6 +190,7 @@ function investment_opportunities_custom_post_type()
             ),
 
             'taxonomies' => array('post_tag'),
+            'menu_position' => 9,
         )
     );
 }
@@ -194,6 +214,7 @@ function career_custom_post_type()
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
             'taxonomies' => array('post_tag'),
+            'menu_position' => 10,
         )
     );
 }
@@ -217,10 +238,63 @@ function booking_custom_post_type()
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
             'taxonomies' => array('post_tag'),
+            'menu_position' => 11,
         )
     );
 }
 add_action('init', 'booking_custom_post_type');
+
+function citizen_charter_custom_post_type()
+{
+    register_post_type('citizen-charter',
+        array(
+            'rewrite' => array('slug' => 'citizen-charters'),
+            'labels' => array(
+                'name' => 'Citizen Charter',
+                'singular_name' => 'Citizen Charter',
+                'add_new_item' => 'Add New Citizen Charter',
+                'edit_item' => 'Edit Citizen Charter',
+            ),
+            'menu-icon' => 'dashicons-clipboard',
+            'public' => true,
+            'has_archive' => true,
+            'show_in_rest' => true,
+            'supports' => array(
+                'title', 'thumbnail', 'editor', 'excerpt', 'comments',
+            ),
+
+            'taxonomies' => array('post_tag'),
+            'menu_position' => 12,
+        )
+    );
+}
+add_action('init', 'citizen_charter_custom_post_type');
+
+function corporate_governance_custom_post_type()
+{
+    register_post_type('corporate-governance',
+        array(
+            'rewrite' => array('slug' => 'corporate-governances'),
+            'labels' => array(
+                'name' => 'Corporate Governance Scorecard',
+                'singular_name' => 'Corporate Governance Scorecard',
+                'add_new_item' => 'Add New Corporate Governance Scorecard',
+                'edit_item' => 'Edit Corporate Governance Scorecard',
+            ),
+            'menu-icon' => 'dashicons-clipboard',
+            'public' => true,
+            'has_archive' => true,
+            'show_in_rest' => true,
+            'supports' => array(
+                'title', 'thumbnail', 'editor', 'excerpt', 'comments',
+            ),
+
+            'taxonomies' => array('post_tag'),
+            'menu_position' => 13,
+        )
+    );
+}
+add_action('init', 'corporate_governance_custom_post_type');
 
 /**
  * Reseervation Exist Validation

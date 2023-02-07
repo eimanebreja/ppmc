@@ -20,6 +20,7 @@ while (have_posts()) {
             <div class="procurement__single--header">
                 <h3> <?php the_title();?></h3>
             </div>
+
             <div class="procurement__single--document">
                 <?php
 if (have_rows('document_file_upload')):
@@ -42,6 +43,17 @@ endwhile;
     else:
     endif;
     ?>
+            </div>
+            <div class="procurement__single--status">
+                <?php
+$field = get_field_object('document_status');
+    $value = $field['value'];
+    $label = $field['choices'][$value];
+    ?>
+                <p>Status : <span class="status-<?php echo esc_attr($value); ?>">
+                        <?php echo esc_html($label); ?>
+                    </span>
+                </p>
             </div>
         </div>
 

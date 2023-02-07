@@ -119,7 +119,7 @@ body {
     justify-content: space-between; }
   .nav__middlearea--list {
     list-style: none;
-    padding-left: 50px; }
+    padding-left: 40px; }
   .nav__middlearea--link {
     font-size: 15px;
     font-family: "Roboto-Medium";
@@ -894,6 +894,19 @@ body {
       font-family: "Roboto-Light";
       font-size: 18px;
       color: #000000; }
+      .investment__tab--title p a {
+        color: #1a7dc3;
+        transition: 0.3s; }
+        .investment__tab--title p a:hover {
+          transition: 0.3s;
+          opacity: 0.5;
+          text-decoration: none; }
+    .investment__tab--title h4 {
+      font-weight: 100;
+      font-family: "Roboto-Light";
+      font-size: 32px;
+      color: #1a7dc3;
+      padding-top: 20px; }
     .investment__tab--gallery {
       padding-top: 20px;
       display: grid;
@@ -1072,6 +1085,8 @@ body {
         font-size: 38px; }
       .investment__tab--title p {
         font-size: 16px; }
+      .investment__tab--title h4 {
+        font-size: 22px; }
       .investment__tab .bottom-text {
         padding-top: 40px; }
         .investment__tab .bottom-text p {
@@ -1124,7 +1139,25 @@ body {
     .procurement__content--tem {
       margin-top: 13px;
       border: 1px solid #d9d9d9;
-      padding: 35px; }
+      padding: 35px;
+      position: relative; }
+    .procurement__content--status {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #ffd500;
+      width: 100px;
+      height: 50px;
+      color: #ffffff;
+      font-size: 16px;
+      font-family: "Roboto-Regular";
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .procurement__content--status.status-invitation {
+        background-color: #ffd500; }
+      .procurement__content--status.status-awarded {
+        background-color: #39b54a; }
     .procurement__content--title a {
       margin: 0;
       font-size: 30px;
@@ -1225,27 +1258,41 @@ body {
       color: #1a7dc3;
       font-family: "Roboto-Light";
       margin: 0; }
-  .procurement__single--document {
+  .procurement__single--status {
+    padding-top: 25px;
     padding-bottom: 90px; }
-    .procurement__single--document .document-menu {
+    .procurement__single--status p {
       margin: 0;
-      padding: 0; }
-    .procurement__single--document .document-list {
-      padding-top: 25px;
-      list-style: none;
-      display: flex;
-      align-items: center; }
-      .procurement__single--document .document-list span {
-        padding-right: 30px; }
-        .procurement__single--document .document-list span img {
-          width: 17px;
-          display: block; }
-    .procurement__single--document .document-link {
-      margin: 0;
+      padding: 0;
       font-size: 24px;
       color: #000000;
       font-family: "Roboto-Light";
       text-decoration: none; }
+      .procurement__single--status p span {
+        font-family: "Roboto-Regular"; }
+      .procurement__single--status p .status-invitation {
+        color: #ffd500; }
+      .procurement__single--status p.status-awarded {
+        color: #39b54a; }
+  .procurement__single--document .document-menu {
+    margin: 0;
+    padding: 0; }
+  .procurement__single--document .document-list {
+    padding-top: 25px;
+    list-style: none;
+    display: flex;
+    align-items: center; }
+    .procurement__single--document .document-list span {
+      padding-right: 30px; }
+      .procurement__single--document .document-list span img {
+        width: 17px;
+        display: block; }
+  .procurement__single--document .document-link {
+    margin: 0;
+    font-size: 24px;
+    color: #000000;
+    font-family: "Roboto-Light";
+    text-decoration: none; }
   .procurement__comment {
     padding-top: 40px;
     border-top: 1px solid #d9d9d9; }
@@ -1406,9 +1453,15 @@ body {
           font-size: 38px; }
       .procurement__content--tem {
         margin-top: 10px;
-        padding: 30px; }
+        padding: 30px;
+        padding-right: 100px; }
       .procurement__content--title a {
         font-size: 26px; }
+      .procurement__content--status {
+        width: 90px;
+        height: 40px;
+        color: #ffffff;
+        font-size: 14px; }
       .procurement__content--desc {
         padding-top: 15px; }
         .procurement__content--desc p {
@@ -1451,16 +1504,21 @@ body {
       padding-top: 50px; }
       .procurement__single--header h3 {
         font-size: 38px; }
-    .procurement__single--document {
+    .procurement__single--status {
+      padding-top: 20px;
       padding-bottom: 70px; }
-      .procurement__single--document .document-list {
-        padding-top: 20px; }
-        .procurement__single--document .document-list span {
-          padding-right: 26px; }
-          .procurement__single--document .document-list span img {
-            width: 14px; }
-      .procurement__single--document .document-link {
+      .procurement__single--status p {
         font-size: 20px; }
+        .procurement__single--status p span {
+          font-family: "Roboto-Regular"; }
+    .procurement__single--document .document-list {
+      padding-top: 20px; }
+      .procurement__single--document .document-list span {
+        padding-right: 26px; }
+        .procurement__single--document .document-list span img {
+          width: 14px; }
+    .procurement__single--document .document-link {
+      font-size: 20px; }
     .procurement__comment {
       padding-top: 40px; }
       .procurement__comment .comments-title {
@@ -2989,10 +3047,32 @@ body {
         color: #1a7dc3;
         font-size: 48px; }
     .citizen__content--body {
-      padding-top: 80px; }
+      padding-top: 40px; }
       .citizen__content--body object {
         width: 100%;
         height: 827px; }
+    .citizen__content--object {
+      margin-top: 50px; }
+      .citizen__content--object .object-download {
+        padding-bottom: 20px;
+        max-width: 150px;
+        margin-left: auto; }
+        .citizen__content--object .object-download a {
+          width: 100%;
+          height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #1a7dc3;
+          font-weight: 100;
+          font-family: "Roboto-Light";
+          color: #ffffff;
+          font-size: 16px;
+          transition: 0.3s; }
+          .citizen__content--object .object-download a:hover {
+            text-decoration: none;
+            opacity: 0.7;
+            transition: 0.3s; }
 
 @media only screen and (min-width: 1200px) and (max-width: 1450px) {
   .citizen {
@@ -3012,7 +3092,7 @@ body {
         .citizen__content--header h3 {
           font-size: 38px; }
       .citizen__content--body {
-        padding-top: 40px; }
+        padding-top: 20px; }
         .citizen__content--body object {
           width: 100%;
           height: 700px; } }
@@ -3931,6 +4011,388 @@ body {
         padding-bottom: 10px; }
         .privacy__content--header h3 {
           font-size: 38px; } }
+.feedback-right {
+  position: fixed;
+  right: 0;
+  z-index: 200;
+  top: 30%;
+  writing-mode: vertical-rl;
+  background-color: #1a7dc3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 184px;
+  width: 56px;
+  color: #ffffff !important;
+  font-family: "Roboto-Medium";
+  font-size: 20px;
+  transition: 0.3s ease-in; }
+  .feedback-right:hover {
+    transition: 0.3s ease-in;
+    text-decoration: none;
+    opacity: 0.8; }
+
+.feedback {
+  padding-top: 210px;
+  padding-bottom: 30px; }
+  .feedback__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .feedback__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center; }
+    .feedback__banner--title h2 {
+      font-size: 48px;
+      font-family: "Roboto-Medium";
+      font-weight: 500;
+      color: #ffffff; }
+  .feedback__content {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+    .feedback__content--header h3 {
+      margin: 0;
+      font-weight: 100;
+      font-family: "Roboto-Light";
+      color: #1a7dc3;
+      font-size: 48px; }
+    .feedback__content--body {
+      padding-top: 80px; }
+    .feedback__content--title {
+      font-size: 24px;
+      font-family: "Roboto-Light";
+      color: #1a7dc3; }
+    .feedback__content--desc {
+      padding-top: 20px; }
+      .feedback__content--desc p {
+        margin: 0;
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #000000; }
+    .feedback__content--form {
+      padding-top: 10px; }
+    .feedback__content .wpcf7-response-output {
+      text-align: center;
+      padding: 20px !important;
+      font-size: 16px;
+      font-family: "Roboto-Regular"; }
+    .feedback__content--row {
+      display: flex;
+      justify-content: space-between; }
+    .feedback__content--item {
+      flex-basis: 47%; }
+    .feedback__content--label {
+      padding-top: 5px;
+      font-size: 18px;
+      font-family: "Roboto-Light";
+      color: #000000; }
+      .feedback__content--label p {
+        margin: 0; }
+    .feedback__content--input {
+      padding-top: 20px; }
+      .feedback__content--input input {
+        width: 100%;
+        height: 70px;
+        border: 1px solid #d9d9d9;
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #000000;
+        padding-left: 20px;
+        padding-right: 20px; }
+    .feedback__content--textarea {
+      padding-top: 20px; }
+      .feedback__content--textarea textarea {
+        width: 100%;
+        border: 1px solid #d9d9d9;
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #000000;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px; }
+      .feedback__content--textarea .medium {
+        height: 150px; }
+      .feedback__content--textarea .large {
+        height: 250px; }
+    .feedback__content .radio {
+      display: flex;
+      align-items: center; }
+      .feedback__content .radio .radio-input {
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #000000; }
+        .feedback__content .radio .radio-input p {
+          margin: 0; }
+        .feedback__content .radio .radio-input input {
+          height: 30px; }
+        .feedback__content .radio .radio-input .wpcf7-form-control {
+          display: flex;
+          flex-direction: column; }
+          .feedback__content .radio .radio-input .wpcf7-form-control .wpcf7-list-item label {
+            display: flex; }
+            .feedback__content .radio .radio-input .wpcf7-form-control .wpcf7-list-item label input {
+              width: unset; }
+            .feedback__content .radio .radio-input .wpcf7-form-control .wpcf7-list-item label .wpcf7-list-item-label {
+              padding-top: 1px;
+              font-size: 18px;
+              font-family: "Roboto-Light";
+              color: #000000;
+              padding-left: 20px;
+              padding-right: 20px; }
+      .feedback__content .radio .radio-label {
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #000000;
+        padding-left: 20px;
+        padding-right: 20px; }
+    .feedback__content--whole {
+      flex-basis: 100%; }
+    .feedback__content--btn {
+      flex-basis: 100%;
+      max-width: 223px;
+      margin-top: 25px; }
+      .feedback__content--btn button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 63px;
+        width: 100% !important;
+        background: #ffffff !important;
+        border: 1px solid #1a7dc3;
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border-radius: 0px; }
+        .feedback__content--btn button:hover {
+          transition: 0.3s ease;
+          background: #1a7dc3 !important;
+          color: #ffffff; }
+      .feedback__content--btn input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 63px;
+        width: 100% !important;
+        background: #ffffff !important;
+        border: 1px solid #1a7dc3;
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border-radius: 0px; }
+        .feedback__content--btn input:hover {
+          transition: 0.3s ease;
+          background: #1a7dc3 !important;
+          color: #ffffff; }
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .feedback-right {
+    top: 30%;
+    height: 154px;
+    width: 40px;
+    font-size: 16px; }
+
+  .feedback {
+    padding-top: 190px;
+    padding-bottom: 30px; }
+    .feedback__container {
+      max-width: 1300px; }
+    .feedback__banner {
+      height: 280px; }
+      .feedback__banner--title h2 {
+        font-size: 38px; }
+    .feedback__content {
+      padding-top: 40px;
+      padding-bottom: 90px; }
+      .feedback__content--header {
+        padding-bottom: 10px; }
+        .feedback__content--header h3 {
+          font-size: 38px; }
+      .feedback__content--body {
+        padding-top: 30px; }
+      .feedback__content--title {
+        font-size: 22px; }
+      .feedback__content--desc ul li {
+        font-size: 16px; }
+      .feedback__content--form {
+        padding-top: 5px; }
+      .feedback__content--item {
+        flex-basis: 48%; }
+      .feedback__content--label {
+        padding-top: 15px;
+        font-size: 16px; }
+        .feedback__content--label p {
+          margin: 0; }
+      .feedback__content--input {
+        padding-top: 10px; }
+        .feedback__content--input input {
+          height: 55px;
+          font-size: 16px; }
+        .feedback__content--input p {
+          margin: 0; }
+      .feedback__content--textarea {
+        padding-top: 10px; }
+        .feedback__content--textarea p {
+          margin: 0; }
+        .feedback__content--textarea textarea {
+          font-size: 16px; }
+      .feedback__content .radio {
+        display: flex;
+        align-items: center; }
+        .feedback__content .radio .radio-input {
+          font-size: 16px; }
+          .feedback__content .radio .radio-input .wpcf7-form-control .wpcf7-list-item label .wpcf7-list-item-label {
+            padding-top: 1px;
+            font-size: 16px;
+            padding-left: 15px; }
+        .feedback__content .radio .radio-label {
+          margin-top: -5px;
+          font-size: 16px;
+          padding-left: 15px; }
+      .feedback__content--whole {
+        flex-basis: 100%; }
+      .feedback__content--btn {
+        flex-basis: 100%;
+        max-width: 187px;
+        margin-top: 25px; }
+        .feedback__content--btn button {
+          height: 55px;
+          font-size: 16px; }
+        .feedback__content--btn input {
+          height: 55px;
+          font-size: 16px; } }
+.governance {
+  padding-top: 210px;
+  padding-bottom: 30px; }
+  .governance__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .governance__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center; }
+    .governance__banner--title h2 {
+      font-size: 48px;
+      font-family: "Roboto-Medium";
+      font-weight: 500;
+      color: #ffffff; }
+  .governance__content {
+    padding-top: 90px;
+    padding-bottom: 90px; }
+    .governance__content--header {
+      padding-bottom: 20px; }
+      .governance__content--header h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 48px; }
+    .governance__content--body {
+      padding-top: 20px; }
+      .governance__content--body h3 {
+        padding-top: 20px;
+        margin: 0;
+        font-weight: 100;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 32px; }
+      .governance__content--body h4 {
+        padding-top: 20px;
+        margin: 0;
+        font-weight: 100;
+        font-family: "Roboto-Light";
+        color: #1a7dc3;
+        font-size: 26px; }
+      .governance__content--body ol li {
+        padding-top: 10px;
+        font-size: 18px;
+        font-family: "Roboto-Light";
+        color: #000000;
+        margin: 0; }
+        .governance__content--body ol li::marker {
+          color: #000000; }
+        .governance__content--body ol li a {
+          color: #1a7dc3; }
+          .governance__content--body ol li a:hover {
+            text-decoration: none; }
+  .governance__corporate--collapse {
+    margin-top: 46px;
+    background-color: #1a7dc3;
+    padding: 22px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer; }
+    .governance__corporate--collapse .collapse-title {
+      font-family: "Roboto-Regular";
+      font-size: 24px;
+      color: #ffffff; }
+    .governance__corporate--collapse .collaps-icon img {
+      width: 24px;
+      display: block; }
+  .governance__corporate--desc {
+    display: none; }
+    .governance__corporate--desc:nth-child(1) {
+      border: 1px solid blue; }
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .governance {
+    padding-top: 190px;
+    padding-bottom: 30px; }
+    .governance__container {
+      max-width: 1300px; }
+    .governance__banner {
+      height: 280px; }
+      .governance__banner--title h2 {
+        font-size: 38px; }
+    .governance__content {
+      padding-top: 40px;
+      padding-bottom: 90px; }
+      .governance__content--header {
+        padding-bottom: 10px; }
+        .governance__content--header h3 {
+          font-size: 38px; }
+      .governance__content--body {
+        padding-top: 20px; }
+        .governance__content--body h3 {
+          padding-top: 20px;
+          font-size: 28px; }
+        .governance__content--body h4 {
+          font-size: 26px; }
+        .governance__content--body ol li {
+          padding-top: 7px;
+          font-size: 16px;
+          font-family: "Roboto-Light";
+          color: #000000;
+          margin: 0; }
+          .governance__content--body ol li::marker {
+            color: #000000; }
+          .governance__content--body ol li a {
+            color: #1a7dc3; }
+            .governance__content--body ol li a:hover {
+              text-decoration: none; }
+          .governance__content--body ol li ul li::marker {
+            color: #1a7dc3; } }
 .company-ft {
   padding-top: 40px; }
   .company-ft__container {

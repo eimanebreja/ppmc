@@ -7,7 +7,7 @@ get_header();
         <div class="news__container">
             <div class="news__banner--title">
                 <h2>
-                    News and Updates
+                    News and Announcement
                 </h2>
             </div>
         </div>
@@ -15,7 +15,7 @@ get_header();
     <div class="news__container">
         <div class="news__content">
             <div class="news__content--header">
-                <h3>News and Updates</h3>
+                <h3>News and Announcement</h3>
             </div>
             <?php
 query_posts(array(

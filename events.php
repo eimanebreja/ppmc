@@ -13,7 +13,7 @@ get_header();
         <div class="event__container">
             <div class="event__banner--title">
                 <h2>
-                    Book your Events
+                    Events
                 </h2>
             </div>
         </div>
@@ -95,4 +95,4 @@ acf_form(array(
     </div>
 </div>
 
-<?php get_footer("events");
+<?php get_footer();

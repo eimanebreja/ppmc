@@ -19,11 +19,40 @@ get_header();
                     <h3>Citizen’s Charter</h3>
                 </div>
                 <div class="citizen__content--body">
-                    <object
-                        data="<?php echo THEME_DIR; ?>/assets/file/FINAL_PPMC_Citizens_Charter_4thEdition_CY2022_UNCONTROLLED_COPY.pdf"
-                        type="application/pdf">
-                        <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
-                    </object>
+
+
+                    <?php
+query_posts(array(
+    'post_type' => 'citizen-charter',
+));
+
+if (have_posts()): ?>
+                    <?php while (have_posts()): the_post();?>
+                    <?php
+    $file = get_field('add_file');
+    ?>
+
+                    <?php
+    if ($file):
+        // Extract variables.
+        $url = $file['url'];
+        $title = $file['title'];
+        ?>
+                    <div class="citizen__content--object">
+                        <div class="object-download"><a href="<?php echo esc_attr($url); ?>" download>Download</a></div>
+                        <div class="object-content">
+                            <object data="<?php echo esc_attr($url); ?>" type="application/pdf">
+                            </object>
+                        </div>
+                    </div>
+                    <?php endif;?>
+                    <?php endwhile;?>
+                    <?php else: ?>
+                    <div class="no-result">
+                        <h1>No results found</h1>
+                    </div>
+                    <?php endif;?>
+
                 </div>
             </div>
         </div>

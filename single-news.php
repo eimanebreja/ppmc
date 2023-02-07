@@ -4,7 +4,7 @@
         <div class="news__container">
             <div class="news__banner--title">
                 <h2>
-                    News and Updates
+                    News and Archives
                 </h2>
             </div>
         </div>

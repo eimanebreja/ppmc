@@ -35,7 +35,7 @@ get_header();
             </div>
             <div class="csr__report">
                 <div class="csr__report--header">
-                    <h3>CSR Reports</h3>
+                    <h3>CSR Program</h3>
                 </div>
                 <div class="csr__report--row">
                     <div class="csr__report--item">

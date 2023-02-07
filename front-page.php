@@ -86,33 +86,37 @@ if (have_posts()): ?>
                     </a>
 
                     <div class="homenews__about--logos">
-                        <div class="homenews__about--logo">
+                        <a href="https://www.foi.gov.ph/" target="_blank" class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/foi_logo.png"
                                 alt="Freedom of Information">
-                        </div>
-                        <div class="homenews__about--logo">
+                        </a>
+                        <a href="<?php echo THEME_DIR; ?>/assets/file/ISO_9001_2015_Certificate.pdf" target="_blank"
+                            class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/tuv_nord_logo.png" alt="TUV Nord">
-                        </div>
-                        <div class="homenews__about--logo">
+                        </a>
+                        <a href="https://whistleblowing.gcg.gov.ph/#/" target="_blank" class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/gcg_logo.png"
                                 alt="GCG Whistleblowing Web Portal">
-                        </div>
-                        <div class="homenews__about--logo">
+                        </a>
+                        <a href="<?php echo THEME_DIR; ?>/assets/file/public_advisory.jpeg" target="_blank"
+                            class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/ppmc_advisory_logo.png"
                                 alt="PPMC Public Advisory">
-                        </div>
-                        <div class="homenews__about--logo">
+                        </a>
+                        <a href="<?php echo site_url('/good-governance'); ?>" class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/disclosure_requirements.png"
                                 alt="Good Governance">
-                        </div>
-                        <div class="homenews__about--logo">
+                        </a>
+                        <a href="<?php echo site_url('/transparency-seal'); ?>" target="_blank"
+                            class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/transparency_logo.png"
                                 alt="Transparency">
-                        </div>
-                        <div class="homenews__about--logo">
+                        </a>
+                        <a href="<?php echo site_url('/corporate-governance'); ?>" target="_blank"
+                            class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/corporate_logo.png"
                                 alt="Corporate Governance">
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

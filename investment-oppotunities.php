@@ -35,9 +35,6 @@ query_posts(array(
                         <?php endwhile;?>
                         <?php else: ?>
                         <?php endif;?>
-
-
-
                         <?php
 query_posts(array(
     'post_type' => 'investments',
@@ -59,9 +56,6 @@ query_posts(array(
 
 
                     <!--- END OF TAB --->
-
-
-
 
                     <div class="investment__tab--content">
 
@@ -109,7 +103,6 @@ query_posts(array(
                             <?php
     }
     ?>
-
                             <div class="investment__gallery popup">
                                 <div class="investment__gallery--container">
                                     <div class="investment__gallery--title">
@@ -131,7 +124,6 @@ query_posts(array(
                                                 <img src="<?php echo esc_url($image['sizes']['large']); ?>"
                                                     alt="<?php echo esc_attr($image['alt']); ?>" />
                                             </a>
-
                                         </div>
                                         <?php endforeach;?>
                                     </div>
@@ -142,10 +134,6 @@ query_posts(array(
                         <?php endwhile;?>
                         <?php else: ?>
                         <?php endif;?>
-
-
-
-
                         <?php
 query_posts(array(
     'post_type' => 'investments',

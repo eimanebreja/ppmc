@@ -1,0 +1,353 @@
+.feedback-right {
+  position: fixed;
+  right: 0;
+  z-index: 200;
+  top: 30%;
+  writing-mode: vertical-rl;
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 184px;
+  width: 56px;
+  color: $white !important;
+  font-family: $r-medium;
+  font-size: 20px;
+  transition: 0.3s ease-in;
+  &:hover {
+    transition: 0.3s ease-in;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}
+
+.feedback {
+  padding-top: 210px;
+  padding-bottom: 30px;
+  &__container {
+    width: 100%;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__banner {
+    background-image: url(../img/investment/fv_banner.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 355px;
+    display: flex;
+    align-items: center;
+
+    &--title {
+      h2 {
+        font-size: 48px;
+        font-family: $r-medium;
+        font-weight: 500;
+        color: $white;
+      }
+    }
+  }
+  &__content {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    &--header {
+      h3 {
+        margin: 0;
+        font-weight: 100;
+        font-family: $r-light;
+        color: $blue;
+        font-size: 48px;
+      }
+    }
+    &--body {
+      padding-top: 80px;
+    }
+    &--title {
+      font-size: 24px;
+      font-family: $r-light;
+      color: $blue;
+    }
+    &--desc {
+      padding-top: 20px;
+      p {
+        margin: 0;
+        font-size: 18px;
+        font-family: $r-light;
+        color: $black;
+      }
+    }
+    &--form {
+      padding-top: 10px;
+    }
+    .wpcf7-response-output {
+      text-align: center;
+      padding: 20px !important;
+      font-size: 16px;
+      font-family: $r-regular;
+    }
+    &--row {
+      display: flex;
+      justify-content: space-between;
+    }
+    &--item {
+      flex-basis: 47%;
+    }
+    &--label {
+      padding-top: 5px;
+      font-size: 18px;
+      font-family: $r-light;
+      color: $black;
+      p {
+        margin: 0;
+      }
+    }
+    &--input {
+      padding-top: 20px;
+      input {
+        width: 100%;
+        height: 70px;
+        border: 1px solid #d9d9d9;
+        font-size: 18px;
+        font-family: $r-light;
+        color: $black;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &--textarea {
+      padding-top: 20px;
+      textarea {
+        width: 100%;
+        border: 1px solid #d9d9d9;
+        font-size: 18px;
+        font-family: $r-light;
+        color: $black;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .medium {
+        height: 150px;
+      }
+      .large {
+        height: 250px;
+      }
+    }
+    .radio {
+      display: flex;
+      align-items: center;
+      .radio-input {
+        font-size: 18px;
+        font-family: $r-light;
+        color: $black;
+        p {
+          margin: 0;
+        }
+        input {
+          height: 30px;
+        }
+        .wpcf7-form-control {
+          display: flex;
+          flex-direction: column;
+
+          .wpcf7-list-item {
+            label {
+              display: flex;
+              input {
+                width: unset;
+              }
+              .wpcf7-list-item-label {
+                padding-top: 1px;
+                font-size: 18px;
+                font-family: $r-light;
+                color: $black;
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+      .radio-label {
+        font-size: 18px;
+        font-family: $r-light;
+        color: $black;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    &--whole {
+      flex-basis: 100%;
+    }
+    &--btn {
+      flex-basis: 100%;
+      max-width: 223px;
+      margin-top: 25px;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 63px;
+        width: 100% !important;
+        background: $white !important;
+        border: 1px solid $blue;
+        font-size: 18px;
+        font-family: $r-light;
+        color: $blue;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border-radius: 0px;
+        &:hover {
+          transition: 0.3s ease;
+          background: $blue !important;
+          color: $white;
+        }
+      }
+      input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 63px;
+        width: 100% !important;
+        background: $white !important;
+        border: 1px solid $blue;
+        font-size: 18px;
+        font-family: $r-light;
+        color: $blue;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border-radius: 0px;
+        &:hover {
+          transition: 0.3s ease;
+          background: $blue !important;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+  .feedback-right {
+    top: 30%;
+    height: 154px;
+    width: 40px;
+    font-size: 16px;
+  }
+  .feedback {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+      }
+      &--title {
+        font-size: 22px;
+      }
+      &--desc {
+        ul {
+          li {
+            font-size: 16px;
+          }
+        }
+      }
+      &--form {
+        padding-top: 5px;
+      }
+      &--item {
+        flex-basis: 48%;
+      }
+      &--label {
+        padding-top: 15px;
+        font-size: 16px;
+        p {
+          margin: 0;
+        }
+      }
+      &--input {
+        padding-top: 10px;
+        input {
+          height: 55px;
+          font-size: 16px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      &--textarea {
+        padding-top: 10px;
+        p {
+          margin: 0;
+        }
+        textarea {
+          font-size: 16px;
+        }
+      }
+      .radio {
+        display: flex;
+        align-items: center;
+        .radio-input {
+          font-size: 16px;
+          .wpcf7-form-control {
+            .wpcf7-list-item {
+              label {
+                .wpcf7-list-item-label {
+                  padding-top: 1px;
+                  font-size: 16px;
+                  padding-left: 15px;
+                }
+              }
+            }
+          }
+        }
+        .radio-label {
+          margin-top: -5px;
+          font-size: 16px;
+          padding-left: 15px;
+        }
+      }
+      &--whole {
+        flex-basis: 100%;
+      }
+      &--btn {
+        flex-basis: 100%;
+        max-width: 187px;
+        margin-top: 25px;
+
+        button {
+          height: 55px;
+          font-size: 16px;
+        }
+        input {
+          height: 55px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

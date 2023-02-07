@@ -50,6 +50,27 @@
       margin-top: 13px;
       border: 1px solid #d9d9d9;
       padding: 35px;
+      position: relative;
+    }
+    &--status {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #ffd500;
+      width: 100px;
+      height: 50px;
+      color: $white;
+      font-size: 16px;
+      font-family: $r-regular;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.status-invitation {
+        background-color: #ffd500;
+      }
+      &.status-awarded {
+        background-color: #39b54a;
+      }
     }
     &--title {
       a {
@@ -182,8 +203,29 @@
         margin: 0;
       }
     }
-    &--document {
+    &--status {
+      padding-top: 25px;
       padding-bottom: 90px;
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        color: $black;
+        font-family: $r-light;
+        text-decoration: none;
+        span {
+          font-family: $r-regular;
+        }
+        .status-invitation {
+          color: #ffd500;
+        }
+        &.status-awarded {
+          color: #39b54a;
+        }
+      }
+    }
+    &--document {
       .document-menu {
         margin: 0;
         padding: 0;
@@ -421,11 +463,18 @@
       &--tem {
         margin-top: 10px;
         padding: 30px;
+        padding-right: 100px;
       }
       &--title {
         a {
           font-size: 26px;
         }
+      }
+      &--status {
+        width: 90px;
+        height: 40px;
+        color: $white;
+        font-size: 14px;
       }
       &--desc {
         padding-top: 15px;
@@ -500,8 +549,17 @@
           font-size: 38px;
         }
       }
-      &--document {
+      &--status {
+        padding-top: 20px;
         padding-bottom: 70px;
+        p {
+          font-size: 20px;
+          span {
+            font-family: $r-regular;
+          }
+        }
+      }
+      &--document {
         .document-list {
           padding-top: 20px;
 

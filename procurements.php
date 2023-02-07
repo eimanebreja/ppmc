@@ -31,6 +31,14 @@ query_posts(array(
 if (have_posts()): ?>
                 <?php while (have_posts()): the_post();?>
                 <div class="procurement__content--tem">
+                    <?php
+    $field = get_field_object('document_status');
+    $value = $field['value'];
+    $label = $field['choices'][$value];
+    ?>
+                    <div class="procurement__content--status status-<?php echo esc_attr($value); ?>">
+                        <?php echo esc_html($label); ?>
+                    </div>
                     <div class="procurement__content--title">
                         <a href="<?php the_permalink();?>">
                             <?php the_title();?>
