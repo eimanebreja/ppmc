@@ -38,12 +38,12 @@ $arg_query = new WP_Query($arg_archives);
                         <div class="governance__corporate--collapse" id="showmenus<?php echo $i; ?>">
                             <div class="collapse-title">
                                 <?php the_title();?>
+                                <!-- <p class="date-posted"><span>Date Posted: </span><?php the_time('F j, Y');?></p> -->
                             </div>
                             <div class="collaps-icon">
                                 <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_chevron.svg" alt="Icon Chevron">
                             </div>
                         </div>
-
                         <div class="governance__corporate--desc menus<?php echo $i; ?>">
                             <div class="desc-content">
                                 <?php the_content();?>

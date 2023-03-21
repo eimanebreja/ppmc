@@ -362,3 +362,368 @@
     }
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .csr {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 50px;
+      padding-bottom: 40px;
+      &--header {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--desc {
+        padding-top: 20px;
+        p {
+          font-size: 16px;
+        }
+      }
+
+      &--body {
+        padding-top: 40px;
+        p {
+          font-size: 18px;
+          font-family: $r-light;
+          color: $black;
+        }
+      }
+    }
+    &__report {
+      padding-top: 20px;
+      &--header {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--row {
+        padding-top: 30px;
+        gap: 40px;
+      }
+      &--item {
+        position: relative;
+      }
+      &--img {
+        position: relative;
+        img {
+          height: 387px;
+        }
+      }
+      &--logo {
+        .logo {
+          img {
+            width: 67px;
+          }
+        }
+        .text {
+          font-size: 26px;
+        }
+      }
+      &--download {
+        &:hover {
+          text-decoration: none;
+        }
+        .text {
+          font-size: 18px;
+        }
+        .icon {
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+    &__project {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &--header {
+        border-bottom: 1px solid #ebedee;
+        padding-bottom: 20px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--row {
+        padding-top: 40px;
+      }
+      &--item {
+        padding: 30px 40px;
+      }
+      &--title {
+        font-size: 18px;
+      }
+      &--desc {
+        padding-top: 20px;
+        font-size: 16px;
+      }
+      &--seemore {
+        max-width: 117px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .csr {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 50px;
+      padding-bottom: 40px;
+      &--header {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--desc {
+        padding-top: 10px;
+        p {
+          font-size: 16px;
+        }
+      }
+
+      &--body {
+        padding-top: 40px;
+        p {
+          font-size: 18px;
+          font-family: $r-light;
+          color: $black;
+        }
+      }
+    }
+    &__report {
+      padding-top: 20px;
+      &--header {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--row {
+        padding-top: 30px;
+        gap: 40px;
+      }
+      &--item {
+        position: relative;
+      }
+      &--img {
+        position: relative;
+        img {
+          height: 387px;
+        }
+      }
+      &--logo {
+        .logo {
+          img {
+            width: 67px;
+          }
+        }
+        .text {
+          font-size: 26px;
+        }
+      }
+      &--download {
+        &:hover {
+          text-decoration: none;
+        }
+        .text {
+          font-size: 18px;
+        }
+        .icon {
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+    &__project {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &--header {
+        border-bottom: 1px solid #ebedee;
+        padding-bottom: 20px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--row {
+        padding-top: 40px;
+        grid-template-columns: 2fr 2fr;
+      }
+      &--item {
+        padding: 30px 40px;
+      }
+      &--title {
+        font-size: 18px;
+      }
+      &--desc {
+        padding-top: 20px;
+        font-size: 16px;
+      }
+      &--seemore {
+        max-width: 117px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .csr {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 50px;
+      padding-bottom: 40px;
+      &--header {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--desc {
+        padding-top: 10px;
+        p {
+          font-size: 16px;
+        }
+      }
+
+      &--body {
+        padding-top: 20px;
+        p {
+          font-size: 16px;
+          font-family: $r-light;
+          color: $black;
+        }
+      }
+    }
+    &__report {
+      padding-top: 20px;
+      &--header {
+        padding-bottom: 20px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--row {
+        padding-top: 30px;
+        gap: 40px;
+      }
+      &--item {
+        position: relative;
+      }
+      &--img {
+        position: relative;
+        img {
+          height: 387px;
+        }
+      }
+      &--logo {
+        .logo {
+          img {
+            width: 67px;
+          }
+        }
+        .text {
+          font-size: 26px;
+        }
+      }
+      &--download {
+        &:hover {
+          text-decoration: none;
+        }
+        .text {
+          font-size: 18px;
+        }
+        .icon {
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+    &__project {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &--header {
+        border-bottom: 1px solid #ebedee;
+        padding-bottom: 20px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--row {
+        padding-top: 40px;
+        grid-template-columns: 2fr;
+      }
+      &--item {
+        padding: 30px 40px;
+      }
+      &--title {
+        font-size: 18px;
+      }
+      &--desc {
+        padding-top: 20px;
+        font-size: 16px;
+      }
+      &--seemore {
+        max-width: 117px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -117,3 +117,156 @@
     }
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .faq {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+      }
+      &--question {
+        margin-top: 24px;
+        padding: 20px 40px;
+        .question-title {
+          font-size: 20px;
+        }
+        .question-arrow {
+          img {
+            width: 22px;
+          }
+        }
+      }
+      &--answer {
+        padding: 27px 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .faq {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+      }
+      &--question {
+        margin-top: 24px;
+        padding: 20px 40px;
+        .question-title {
+          font-size: 18px;
+        }
+        .question-arrow {
+          img {
+            width: 22px;
+          }
+        }
+      }
+      &--answer {
+        padding: 22px 20px;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .faq {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 20px;
+      padding-bottom: 40px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--body {
+        padding-top: 20px;
+      }
+      &--question {
+        margin-top: 24px;
+        padding: 20px 20px;
+        .question-title {
+          font-size: 16px;
+        }
+        .question-arrow {
+          img {
+            width: 16px;
+          }
+        }
+      }
+      &--answer {
+        padding: 16px 20px;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

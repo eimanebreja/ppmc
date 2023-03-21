@@ -109,6 +109,83 @@
       }
     }
   }
+  &__paginate {
+    padding-top: 120px;
+    &--menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .page-numbers {
+        margin-left: 3px;
+        margin-right: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 80px;
+        color: $blue;
+        font-family: $r-regular;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s;
+        border: 1px solid $blue;
+        &.current {
+          color: $white;
+          font-family: $r-medium;
+          background-color: $blue;
+          &:hover {
+            color: $white;
+            opacity: 0.8;
+            transition: 0.3s;
+          }
+        }
+        // &.next {
+        //   width: 100px;
+        // }
+        // &.prev {
+        //   width: 100px;
+        // }
+
+        &:hover {
+          background-color: $blue;
+          color: $white;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.download-forms {
+  padding-top: 10px;
+  &__body {
+    &--content {
+      padding-top: 20px;
+    }
+    &--title {
+      h4 {
+        font-size: 24px;
+        font-family: $r-light;
+        color: $black;
+        font-weight: 100;
+      }
+    }
+    &--list {
+      ul {
+        li {
+          &::marker {
+            color: $blue;
+          }
+          a {
+            font-size: 18px;
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1450px) {
@@ -166,6 +243,294 @@
         a {
           font-size: 14px;
           padding-right: 25px;
+        }
+      }
+    }
+  }
+  .download-forms {
+    &__body {
+      &--content {
+        padding-top: 10px;
+      }
+      &--title {
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &--list {
+        ul {
+          li {
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .download {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--category {
+        padding-top: 27px;
+        .category-form {
+          &__label {
+            font-size: 18px;
+            padding-bottom: 17px;
+          }
+          select {
+            width: 223px;
+            height: 33px;
+            font-size: 18px;
+          }
+        }
+      }
+      &--row {
+        margin-top: 45px;
+        gap: 32px;
+      }
+
+      &--title {
+        padding-left: 35px;
+        padding-right: 25px;
+        font-size: 18px;
+      }
+      &--link {
+        padding-left: 35px;
+        padding-right: 25px;
+        a {
+          font-size: 14px;
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+  .download-forms {
+    &__body {
+      &--content {
+        padding-top: 10px;
+      }
+      &--title {
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &--list {
+        ul {
+          li {
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .download {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--category {
+        padding-top: 27px;
+        .category-form {
+          &__label {
+            font-size: 18px;
+            padding-bottom: 17px;
+          }
+          select {
+            width: 223px;
+            height: 33px;
+            font-size: 18px;
+          }
+        }
+      }
+      &--row {
+        margin-top: 45px;
+        gap: 32px;
+      }
+
+      &--title {
+        padding-left: 35px;
+        padding-right: 25px;
+        font-size: 18px;
+      }
+      &--link {
+        padding-left: 35px;
+        padding-right: 25px;
+        a {
+          font-size: 14px;
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+  .download-forms {
+    &__body {
+      &--content {
+        padding-top: 10px;
+      }
+      &--title {
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &--list {
+        ul {
+          li {
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .download {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--category {
+        padding-top: 27px;
+        .category-form {
+          &__label {
+            font-size: 14px;
+            padding-bottom: 10px;
+          }
+          select {
+            width: 223px;
+            height: 33px;
+            font-size: 16px;
+          }
+        }
+      }
+      &--row {
+        margin-top: 45px;
+        gap: 32px;
+        grid-template-columns: 2fr;
+      }
+
+      &--title {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+      }
+      &--link {
+        padding-left: 20px;
+        padding-right: 20px;
+        a {
+          font-size: 14px;
+          padding-right: 25px;
+        }
+      }
+    }
+    &__paginate {
+      padding-top: 70px;
+      &--menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .page-numbers {
+          font-size: 14px;
+          line-height: 22px;
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+  .download-forms {
+    &__body {
+      &--content {
+        padding-top: 10px;
+      }
+      &--title {
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &--list {
+        ul {
+          li {
+            a {
+              font-size: 16px;
+            }
+          }
         }
       }
     }

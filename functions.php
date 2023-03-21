@@ -64,6 +64,7 @@ function news_custom_post_type()
             'menu-icon' => 'dashicons-clipboard',
             'public' => true,
             'has_archive' => true,
+            'show_in_rest' => true,
             'supports' => array(
                 'title', 'thumbnail', 'editor', 'excerpt', 'comments',
             ),
@@ -296,6 +297,76 @@ function corporate_governance_custom_post_type()
 }
 add_action('init', 'corporate_governance_custom_post_type');
 
+function downloadable_forms_custom_post_type()
+{
+    register_post_type('downloadable-form',
+        array(
+            'rewrite' => array('slug' => 'downloadable-forms'),
+            'labels' => array(
+                'name' => 'Downloadable Forms',
+                'singular_name' => 'Downloadable Forms',
+                'add_new_item' => 'Add New Downloadable Forms',
+                'edit_item' => 'Edit Downloadable Forms',
+            ),
+            'menu-icon' => 'dashicons-clipboard',
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array(
+                'title', 'thumbnail', 'editor', 'excerpt', 'comments',
+            ),
+            'taxonomies' => array('post_tag'),
+            'menu_position' => 5,
+        )
+    );
+}
+add_action('init', 'downloadable_forms_custom_post_type');
+
+function create_downloadables_post_type()
+{
+    register_post_type('downloadables',
+        array(
+            'labels' => array(
+                'name' => __('Downloadables'),
+                'singular_name' => __('Downloadable'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+}
+add_action('init', 'create_downloadables_post_type');
+function create_downloadables_taxonomy()
+{
+    register_taxonomy(
+        'downloadables-taxonomy',
+        'downloadables',
+        array(
+            'label' => __('Downloadables Taxonomy'),
+            'rewrite' => array('slug' => 'downloadables-taxonomy'),
+            'hierarchical' => true,
+        )
+    );
+}
+add_action('init', 'create_downloadables_taxonomy');
+
+if (!function_exists('my_pagination')):
+    function my_pagination()
+{
+        global $wp_query;
+
+        $big = 999999999; // need an unlikely integer
+
+        echo paginate_links(array(
+            'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+            'format' => '?paged=%#%',
+            'prev_text' => __('←'),
+            'next_text' => __('→'),
+            'current' => max(1, get_query_var('paged')),
+            'total' => $wp_query->max_num_pages,
+        ));
+    }
+endif;
+
 /**
  * Reseervation Exist Validation
  */
@@ -380,37 +451,61 @@ function wpb_move_comment_field_to_bottom($fields)
 
 add_filter('comment_form_fields', 'wpb_move_comment_field_to_bottom');
 
-function weichie_load_more()
+// News Load More
+
+add_action('wp_ajax_load_more', 'load_more');
+add_action('wp_ajax_nopriv_load_more', 'load_more');
+
+function load_more()
 {
-    $ajaxposts = new WP_Query([
-        'post_type' => 'publications',
-        'posts_per_page' => 6,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'paged' => $_POST['paged'],
-    ]);
+    $page = $_POST['page'];
+    $nonce = $_POST['nonce'];
 
-    $response = '';
-    $max_pages = $ajaxposts->max_num_pages;
-
-    if ($ajaxposts->have_posts()) {
-        ob_start();
-        while ($ajaxposts->have_posts()): $ajaxposts->the_post();
-            $response .= the_title();
-        endwhile;
-        $output = ob_get_contents();
-        ob_end_clean();
-    } else {
-        $response = '';
+    // Verify the nonce
+    if (!wp_verify_nonce($nonce, 'load_more_nonce')) {
+        die('Permission denied.');
     }
 
-    $result = [
-        'max' => $max_pages,
-        'html' => $output,
-    ];
+    // Query the news posts for the current page
+    $news_query = new WP_Query(array(
+        'post_type' => 'news',
+        'posts_per_page' => 6,
+        'paged' => $page,
+    ));
 
-    echo json_encode($result);
-    exit;
+    // Render the news posts
+    if ($news_query->have_posts()):
+        while ($news_query->have_posts()):
+            $news_query->the_post();
+            ?>
+<div class="news__content--item">
+    <div class="news__content--img">
+        <?php if (has_post_thumbnail()) {
+                the_post_thumbnail();
+            } else {?>
+        <img src="<?php echo THEME_DIR; ?>/assets/img/newss/news_2.jpg" alt="Enterprise visit to coastline">
+        <?php }?>
+    </div>
+    <div class="news__content--info">
+        <div class="info-title">
+            <h4> <?php the_title();?></h4>
+        </div>
+        <div class="info-desc">
+            <p>
+                <?php echo wp_trim_words(get_the_content(), 50, '...'); ?>
+            </p>
+        </div>
+        <div class="info-btn">
+            <a href="<?php the_permalink();?>">View news</a>
+        </div>
+    </div>
+</div>
+<?php
+    endwhile;
+        wp_reset_postdata();
+    else:
+        echo 'no more';
+    endif;
+
+    wp_die();
 }
-add_action('wp_ajax_weichie_load_more', 'weichie_load_more');
-add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more');

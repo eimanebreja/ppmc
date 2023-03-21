@@ -17,7 +17,7 @@ get_header();
             <div class="download__content--header">
                 <h3>Downloadables</h3>
             </div>
-            <div class="download__content--category">
+            <!-- <div class="download__content--category">
                 <form action="">
                     <div class="category-form">
                         <div class="category-form__label">
@@ -28,65 +28,44 @@ get_header();
                         </select>
                     </div>
                 </form>
-            </div>
+            </div> -->
+            <?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+query_posts(array(
+    'post_type' => 'downloadables',
+    'paged' => $paged,
+    'posts_per_page' => 8,
+));
+
+if (have_posts()): ?>
             <div class="download__content--row">
+                <?php while (have_posts()): the_post();?>
                 <div class="download__content--item">
                     <div class="download__content--title">
-                        Strategy Map (5 - Year Business Plan)
+                        <?php the_title();?>
                     </div>
                     <div class="download__content--link">
-                        <a href="">Download</a>
+                        <?php
+    $pdf = get_field('file');
+    if ($pdf):
+    ?>
+                        <a href="<?php echo $pdf['url']; ?>" download>Download</a>
+                        <?php endif;?>
                     </div>
                 </div>
-                <div class="download__content--item">
-                    <div class="download__content--title">
-                        No Gift Policy
-                    </div>
-                    <div class="download__content--link">
-                        <a href="">Download</a>
-                    </div>
-                </div>
-                <div class="download__content--item">
-                    <div class="download__content--title">
-                        PPFZ Application for Registration Form
-                    </div>
-                    <div class="download__content--link">
-                        <a href="">Download</a>
-                    </div>
-                </div>
-                <div class="download__content--item">
-                    <div class="download__content--title">
-                        PPFZ Letter of Intent
-                    </div>
-                    <div class="download__content--link">
-                        <a href="">Download</a>
-                    </div>
-                </div>
-                <div class="download__content--item">
-                    <div class="download__content--title">
-                        Registration Requirements
-                    </div>
-                    <div class="download__content--link">
-                        <a href="">Download</a>
-                    </div>
-                </div>
-                <div class="download__content--item">
-                    <div class="download__content--title">
-                        Procurement Monitoring Report
-                    </div>
-                    <div class="download__content--link">
-                        <a href="">Download</a>
-                    </div>
-                </div>
-                <div class="download__content--item">
-                    <div class="download__content--title">
-                        Results of 2019 Revalidation
-                    </div>
-                    <div class="download__content--link">
-                        <a href="">Download</a>
-                    </div>
+                <?php endwhile;?>
+
+            </div>
+            <div class="download__paginate">
+                <div class="download__paginate--menu">
+                    <?php my_pagination();?>
                 </div>
             </div>
+            <?php else: ?>
+            <div class="no-result">
+                <h1>No results found</h1>
+            </div>
+            <?php endif;?>
         </div>
     </div>
 </div>

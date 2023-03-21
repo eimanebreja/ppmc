@@ -31,8 +31,7 @@
     padding-top: 90px;
     padding-bottom: 90px;
     &--header {
-      padding-bottom: 50px;
-      border-bottom: 1px solid #ebedee;
+      padding-bottom: 0px;
       h3 {
         margin: 0;
         font-weight: 100;
@@ -42,7 +41,32 @@
       }
     }
     &--body {
-      padding-top: 10px;
+      padding-top: 0px;
+
+      h3 {
+        padding-top: 50px;
+        font-weight: 100;
+        font-size: 28px;
+        color: $blue;
+        font-family: $r-light;
+        margin: 0;
+      }
+      h4 {
+        padding-top: 30px;
+        font-weight: 100;
+        font-size: 24px;
+        color: $blue;
+        font-family: $r-light;
+        margin: 0;
+      }
+      p {
+        padding-top: 10px;
+        font-weight: 100;
+        font-size: 18px;
+        color: $black;
+        font-family: $r-light;
+        margin: 0;
+      }
     }
     &--title {
       padding-top: 40px;
@@ -102,6 +126,126 @@
         padding-bottom: 10px;
         h3 {
           font-size: 38px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .privacy {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .privacy {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--body {
+        h3 {
+          padding-top: 40px;
+          font-size: 26px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      ul {
+        li {
+          font-size: 16px;
+        }
+      }
+      &--header {
+        padding-bottom: 0px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .privacy {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--body {
+        h3 {
+          padding-top: 40px;
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      &--header {
+        padding-bottom: 0px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      ul {
+        li {
+          font-size: 14px;
         }
       }
     }

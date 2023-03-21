@@ -248,3 +248,289 @@
     }
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .contact {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+      }
+      &--title {
+        font-size: 22px;
+      }
+      &--desc {
+        ul {
+          li {
+            font-size: 16px;
+          }
+        }
+      }
+      &--form {
+        padding-top: 5px;
+      }
+      &--item {
+        flex-basis: 48%;
+      }
+      &--label {
+        padding-top: 35px;
+        font-size: 16px;
+        p {
+          margin: 0;
+        }
+      }
+      &--input {
+        padding-top: 10px;
+        input {
+          height: 55px;
+          font-size: 16px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      &--textarea {
+        padding-top: 10px;
+        p {
+          margin: 0;
+        }
+        textarea {
+          font-size: 16px;
+        }
+      }
+      &--whole {
+        flex-basis: 100%;
+      }
+      &--btn {
+        flex-basis: 100%;
+        max-width: 187px;
+        margin-top: 25px;
+
+        button {
+          height: 55px;
+          font-size: 16px;
+        }
+        input {
+          height: 55px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .contact {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+      }
+      &--title {
+        font-size: 20px;
+      }
+      &--desc {
+        ul {
+          li {
+            font-size: 16px;
+          }
+        }
+      }
+      &--form {
+        padding-top: 5px;
+      }
+      &--item {
+        flex-basis: 48%;
+      }
+      &--label {
+        padding-top: 35px;
+        font-size: 16px;
+        p {
+          margin: 0;
+        }
+      }
+      &--input {
+        padding-top: 10px;
+        input {
+          height: 55px;
+          font-size: 16px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      &--textarea {
+        padding-top: 10px;
+        p {
+          margin: 0;
+        }
+        textarea {
+          font-size: 16px;
+        }
+      }
+      &--whole {
+        flex-basis: 100%;
+      }
+      &--btn {
+        flex-basis: 100%;
+        max-width: 187px;
+        margin-top: 25px;
+
+        button {
+          height: 55px;
+          font-size: 16px;
+        }
+        input {
+          height: 55px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .contact {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+      }
+      &--title {
+        font-size: 18px;
+      }
+      &--desc {
+        ul {
+          li {
+            font-size: 14px;
+          }
+        }
+      }
+      &--row {
+        flex-wrap: wrap;
+      }
+      &--form {
+        padding-top: 5px;
+      }
+      &--item {
+        flex-basis: 100%;
+      }
+      &--label {
+        padding-top: 20px;
+        font-size: 14px;
+        p {
+          margin: 0;
+        }
+      }
+      &--input {
+        padding-top: 10px;
+        input {
+          height: 47px;
+          font-size: 14px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      &--textarea {
+        padding-top: 10px;
+        p {
+          margin: 0;
+        }
+        textarea {
+          font-size: 14px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      &--whole {
+        flex-basis: 100%;
+      }
+      &--btn {
+        flex-basis: 100%;
+        max-width: 187px;
+        margin-top: 25px;
+
+        button {
+          height: 55px;
+          font-size: 14px;
+        }
+        input {
+          height: 48px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

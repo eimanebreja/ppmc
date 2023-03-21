@@ -32,12 +32,24 @@
     padding-bottom: 90px;
     &--header {
       padding-bottom: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
       h3 {
         margin: 0;
         font-weight: 100;
         font-family: $r-light;
         color: $blue;
         font-size: 48px;
+      }
+
+      .date {
+        margin: 0;
+        font-size: 16px;
+        color: $blue;
+        span {
+          font-family: $r-medium;
+        }
       }
     }
     &--body {
@@ -61,6 +73,9 @@
       }
 
       ol {
+        em {
+          font-size: 14px;
+        }
         li {
           padding-top: 10px;
           font-size: 18px;
@@ -105,6 +120,15 @@
         font-family: $r-regular;
         font-size: 24px;
         color: $white;
+
+        p {
+          margin: 0;
+          padding-top: 5px;
+          font-size: 14px;
+          span {
+            font-family: $r-medium;
+          }
+        }
       }
       .collaps-icon {
         img {
@@ -184,6 +208,291 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .governance {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+
+      &--body {
+        padding-top: 20px;
+
+        h3 {
+          padding-top: 20px;
+          font-size: 28px;
+        }
+        h4 {
+          font-size: 26px;
+        }
+
+        ol {
+          li {
+            padding-top: 7px;
+            font-size: 16px;
+            font-family: $r-light;
+            color: $black;
+            margin: 0;
+            &::marker {
+              color: $black;
+            }
+
+            a {
+              color: $blue;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+
+            ul {
+              li {
+                &::marker {
+                  color: $blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .governance {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+
+      &--body {
+        padding-top: 20px;
+
+        h3 {
+          padding-top: 20px;
+          font-size: 24px;
+        }
+        h4 {
+          font-size: 20px;
+        }
+
+        ol {
+          li {
+            padding-top: 7px;
+            font-size: 16px;
+            font-family: $r-light;
+            color: $black;
+            margin: 0;
+            &::marker {
+              color: $black;
+            }
+
+            a {
+              color: $blue;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+
+            ul {
+              li {
+                &::marker {
+                  color: $blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__corporate {
+      &--collapse {
+        margin-top: 30px;
+        background-color: $blue;
+        padding: 18px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .collapse-title {
+          font-family: $r-regular;
+          font-size: 20px;
+          color: $white;
+
+          p {
+            margin: 0;
+            padding-top: 5px;
+            font-size: 14px;
+            span {
+              font-family: $r-medium;
+            }
+          }
+        }
+        .collaps-icon {
+          img {
+            width: 24px;
+            display: block;
+          }
+        }
+      }
+      &--desc {
+        display: none;
+        &:nth-child(1) {
+          border: 1px solid blue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .governance {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+
+      &--body {
+        padding-top: 20px;
+
+        h3 {
+          padding-top: 20px;
+          font-size: 20px;
+        }
+        h4 {
+          font-size: 18px;
+        }
+
+        ol {
+          li {
+            padding-top: 7px;
+            font-size: 14px;
+            font-family: $r-light;
+            color: $black;
+            margin: 0;
+            &::marker {
+              color: $black;
+            }
+
+            a {
+              color: $blue;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+
+            ul {
+              li {
+                &::marker {
+                  color: $blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__corporate {
+      &--collapse {
+        margin-top: 20px;
+        background-color: $blue;
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .collapse-title {
+          font-family: $r-regular;
+          font-size: 17px;
+          color: $white;
+
+          p {
+            margin: 0;
+            padding-top: 5px;
+            font-size: 14px;
+          }
+        }
+        .collaps-icon {
+          img {
+            width: 17px;
+          }
+        }
+      }
+      &--desc {
+        display: none;
+        &:nth-child(1) {
+          border: 1px solid blue;
         }
       }
     }

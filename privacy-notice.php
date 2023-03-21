@@ -20,7 +20,15 @@ get_header();
                     <h3>Privacy Notice</h3>
                 </div>
                 <div class="privacy__content--body">
-                    <div class="privacy__content--title">
+                    <?php
+if (have_posts()) {
+    while (have_posts()) {
+        the_post();
+        the_content();
+    }
+}
+?>
+                    <!-- <div class="privacy__content--title">
                         <h4>Statement of Policy</h4>
                     </div>
                     <div class="privacy__content--desc">
@@ -111,7 +119,7 @@ get_header();
                             data only for website enhancement and optimisation purposes. We do not use, and have no
                             intention to use the visitor data to personally identify anyone.
                         </p>
-                    </div>
+                    </div> -->
 
 
                 </div>

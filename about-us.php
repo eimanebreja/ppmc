@@ -123,13 +123,14 @@ get_header();
                                     Map
                                 </div>
                                 <div class="about__map--row">
-                                    <div class="about__map--land">
+                                    <img src="<?php echo THEME_DIR; ?>/assets/img/maps.png" alt="PPMC Map">
+                                    <!-- <div class="about__map--land">
                                         <img src="<?php echo THEME_DIR; ?>/assets/img/about/img_land.png"
                                             alt="PPMC Land">
                                     </div>
                                     <div class="about__map--map">
                                         <img src="<?php echo THEME_DIR; ?>/assets/img/about/img_map.png" alt="PPMC Map">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

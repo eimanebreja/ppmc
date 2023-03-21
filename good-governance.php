@@ -17,6 +17,9 @@ get_header();
             <div class="governance__content">
                 <div class="governance__content--header">
                     <h3> Disclosure Requirements</h3>
+                    <!-- <p class="date">
+                        <span>Date Posted :</span> <?php the_time('F j, Y');?>
+                    </p> -->
                 </div>
                 <div class="governance__content--body">
                     <?php

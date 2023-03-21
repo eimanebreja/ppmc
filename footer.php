@@ -7,7 +7,7 @@
                         <h3>Poro Point Management Corporation</h3>
                         <p>The Poro Point Freeport Zone used to house the former Wallace Air Station. The enactment of
                             Republic Act 7227 (Bases Conversion and Development Act) on March 19, 1992 and Proclamation
-                            No, 216 on July 27, 1993 effectively transferred the stewardship of the Freeport to the
+                            No. 216 on July 27, 1993 effectively transferred the stewardship of the Freeport to the
                             Bases Conversion and Development Authority (BCDA) to facilitate its conversion into a
                             productive economic growth center.</p>
                     </div>
@@ -35,6 +35,8 @@
         </div>
     </div>
 </section>
+
+
 
 <footer>
     <div class="ft-area">

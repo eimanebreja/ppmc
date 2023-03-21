@@ -65,11 +65,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      &.status-invitation {
+      &.status-active {
         background-color: #ffd500;
       }
       &.status-awarded {
         background-color: #39b54a;
+      }
+      &.status-failed {
+        background-color: #eb1a28;
       }
     }
     &--title {
@@ -217,11 +220,14 @@
         span {
           font-family: $r-regular;
         }
-        .status-invitation {
+        .status-active {
           color: #ffd500;
         }
-        &.status-awarded {
+        .status-awarded {
           color: #39b54a;
+        }
+        .status-failed {
+          color: #eb1a28;
         }
       }
     }
@@ -235,6 +241,12 @@
         list-style: none;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #d9d9d9;
+
+        &:last-child {
+          border-bottom: 0px solid #d9d9d9;
+        }
         span {
           padding-right: 30px;
           img {
@@ -249,6 +261,16 @@
         color: $black;
         font-family: $r-light;
         text-decoration: none;
+      }
+      .date-post {
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-left: 50px;
+        flex-basis: 100%;
+        font-family: $r-light;
+        font-size: 16px;
+        color: $black;
+        margin: 0;
       }
     }
   }
@@ -573,6 +595,9 @@
         .document-link {
           font-size: 20px;
         }
+        .date-post {
+          padding-left: 40px;
+        }
       }
     }
     &__comment {
@@ -631,6 +656,754 @@
         }
         .row {
           .row-item {
+            .comment-form-author {
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+
+            .comment-form-email {
+              margin-top: 20px;
+              label {
+                display: none;
+              }
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+            .comment-form-url {
+              margin-top: 20px;
+              label {
+                display: none;
+              }
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+          }
+          .comment-form-cookies-consent {
+            padding-top: 30px;
+            label {
+              font-size: 14px;
+              color: $black;
+              font-family: $r-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .procurement {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__body {
+      padding-top: 50px;
+      padding-bottom: 70px;
+      gap: 25px;
+    }
+    &__content {
+      flex-basis: 70%;
+      &--header {
+        margin-bottom: 20px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--tem {
+        margin-top: 10px;
+        padding: 30px;
+        padding-right: 100px;
+      }
+      &--title {
+        a {
+          font-size: 22px;
+        }
+      }
+      &--status {
+        width: 80px;
+        height: 36px;
+        font-size: 12px;
+      }
+      &--desc {
+        padding-top: 15px;
+        p {
+          font-size: 16px;
+        }
+      }
+      &--details {
+        padding-top: 15px;
+        .details-date {
+          font-size: 14px;
+
+          .date {
+            margin-right: 10px;
+            img {
+              width: 15px;
+            }
+          }
+        }
+        .details-documents {
+          font-size: 14px;
+          .documents {
+            img {
+              width: 23px;
+            }
+          }
+        }
+      }
+    }
+    &__sidebar {
+      flex-basis: 30%;
+      margin-top: 15px;
+      &--header {
+        margin-bottom: 29px;
+        font-size: 20px;
+      }
+      &--item {
+        margin-top: 10px;
+        padding: 20px 25px;
+      }
+      &--title {
+        a {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      &--details {
+        padding-top: 10px;
+        .details-date {
+          font-size: 12px;
+
+          .date {
+            img {
+              width: 14px;
+            }
+          }
+        }
+        .details-documents {
+          padding-left: 20px;
+          font-size: 12px;
+          .documents {
+            img {
+              width: 21px;
+            }
+          }
+        }
+      }
+    }
+    &__single {
+      &--header {
+        padding-top: 50px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--status {
+        padding-top: 20px;
+        padding-bottom: 70px;
+        p {
+          font-size: 18px;
+          span {
+            font-family: $r-regular;
+          }
+        }
+      }
+      &--document {
+        .document-list {
+          padding-top: 20px;
+
+          span {
+            padding-right: 22px;
+            img {
+              width: 12px;
+            }
+          }
+        }
+        .document-link {
+          font-size: 20px;
+        }
+        .date-post {
+          padding-left: 40px;
+        }
+      }
+    }
+    &__comment {
+      padding-top: 40px;
+      .comments-title {
+        max-width: 1300px;
+        font-size: 20px;
+      }
+      .comment-list {
+        max-width: 1300px;
+      }
+
+      .comment-reply-title {
+        max-width: 1300px;
+        font-size: 20px;
+        small {
+          a {
+            font-size: 14px;
+            &:hover {
+              text-decoration: none !important;
+            }
+          }
+        }
+      }
+      .comment-form {
+        max-width: 1300px;
+
+        p {
+          margin: 0;
+        }
+        .comment-notes {
+          padding-top: 20px;
+          font-size: 16px;
+        }
+        .comment-form-comment {
+          margin-top: 20px;
+          label {
+            display: none;
+          }
+          textarea {
+            height: 150px;
+            font-size: 14px;
+          }
+        }
+        .form-submit {
+          margin-top: 20px;
+          .submit {
+            height: 56px;
+            font-size: 16px;
+            &:hover {
+              transition: 0.3s ease;
+              background: $blue;
+              color: $white;
+            }
+          }
+        }
+        .row {
+          .row-item {
+            .comment-form-author {
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+
+            .comment-form-email {
+              margin-top: 20px;
+              label {
+                display: none;
+              }
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+            .comment-form-url {
+              margin-top: 20px;
+              label {
+                display: none;
+              }
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+          }
+          .comment-form-cookies-consent {
+            padding-top: 30px;
+            label {
+              font-size: 14px;
+              color: $black;
+              font-family: $r-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .procurement {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__body {
+      padding-top: 50px;
+      padding-bottom: 70px;
+      gap: 25px;
+    }
+    &__content {
+      flex-basis: 70%;
+      &--header {
+        margin-bottom: 20px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--tem {
+        margin-top: 10px;
+        padding: 30px;
+        padding-right: 100px;
+      }
+      &--title {
+        a {
+          font-size: 20px;
+        }
+      }
+      &--status {
+        width: 80px;
+        height: 36px;
+        font-size: 12px;
+      }
+      &--desc {
+        padding-top: 15px;
+        p {
+          font-size: 16px;
+        }
+      }
+      &--details {
+        padding-top: 15px;
+        .details-date {
+          font-size: 14px;
+
+          .date {
+            margin-right: 10px;
+            img {
+              width: 15px;
+            }
+          }
+        }
+        .details-documents {
+          font-size: 14px;
+          .documents {
+            img {
+              width: 23px;
+            }
+          }
+        }
+      }
+    }
+    &__sidebar {
+      flex-basis: 30%;
+      margin-top: 15px;
+      &--header {
+        margin-bottom: 29px;
+        font-size: 20px;
+      }
+      &--item {
+        margin-top: 10px;
+        padding: 20px 25px;
+      }
+      &--title {
+        a {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      &--details {
+        padding-top: 10px;
+        .details-date {
+          font-size: 12px;
+
+          .date {
+            img {
+              width: 14px;
+            }
+          }
+        }
+        .details-documents {
+          padding-left: 20px;
+          font-size: 12px;
+          .documents {
+            img {
+              width: 21px;
+            }
+          }
+        }
+      }
+    }
+    &__single {
+      &--header {
+        padding-top: 50px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--status {
+        padding-top: 20px;
+        padding-bottom: 70px;
+        p {
+          font-size: 18px;
+          span {
+            font-family: $r-regular;
+          }
+        }
+      }
+      &--document {
+        .document-list {
+          padding-top: 20px;
+
+          span {
+            padding-right: 22px;
+            img {
+              width: 12px;
+            }
+          }
+        }
+        .document-link {
+          font-size: 20px;
+        }
+        .date-post {
+          padding-left: 40px;
+        }
+      }
+    }
+    &__comment {
+      padding-top: 40px;
+      .comments-title {
+        max-width: 1300px;
+        font-size: 20px;
+      }
+      .comment-list {
+        max-width: 1300px;
+      }
+
+      .comment-reply-title {
+        max-width: 1300px;
+        font-size: 20px;
+        small {
+          a {
+            font-size: 14px;
+            &:hover {
+              text-decoration: none !important;
+            }
+          }
+        }
+      }
+      .comment-form {
+        max-width: 1300px;
+
+        p {
+          margin: 0;
+        }
+        .comment-notes {
+          padding-top: 20px;
+          font-size: 16px;
+        }
+        .comment-form-comment {
+          margin-top: 20px;
+          label {
+            display: none;
+          }
+          textarea {
+            height: 150px;
+            font-size: 14px;
+          }
+        }
+        .form-submit {
+          margin-top: 20px;
+          .submit {
+            height: 56px;
+            font-size: 16px;
+            &:hover {
+              transition: 0.3s ease;
+              background: $blue;
+              color: $white;
+            }
+          }
+        }
+        .row {
+          .row-item {
+            .comment-form-author {
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+
+            .comment-form-email {
+              margin-top: 20px;
+              label {
+                display: none;
+              }
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+            .comment-form-url {
+              margin-top: 20px;
+              label {
+                display: none;
+              }
+              input {
+                height: 55px;
+                font-size: 14px;
+              }
+            }
+          }
+          .comment-form-cookies-consent {
+            padding-top: 30px;
+            label {
+              font-size: 14px;
+              color: $black;
+              font-family: $r-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 749px) {
+  .procurement {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__body {
+      padding-top: 50px;
+      padding-bottom: 30px;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    &__content {
+      flex-basis: 100%;
+      &--header {
+        margin-bottom: 20px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--tem {
+        margin-top: 10px;
+        padding: 10px 20px;
+        padding-right: 100px;
+      }
+      &--title {
+        a {
+          font-size: 16px;
+        }
+      }
+      &--status {
+        width: 60px;
+        height: 30px;
+        font-size: 10px;
+      }
+      &--desc {
+        padding-top: 15px;
+        p {
+          font-size: 16px;
+        }
+      }
+      &--details {
+        padding-top: 15px;
+        .details-date {
+          font-size: 14px;
+
+          .date {
+            margin-right: 10px;
+            img {
+              width: 15px;
+            }
+          }
+        }
+        .details-documents {
+          font-size: 14px;
+          .documents {
+            img {
+              width: 23px;
+            }
+          }
+        }
+      }
+    }
+    &__sidebar {
+      flex-basis: 100%;
+      margin-top: 15px;
+      &--header {
+        margin-bottom: 29px;
+        font-size: 20px;
+      }
+      &--item {
+        margin-top: 10px;
+        padding: 20px 25px;
+      }
+      &--title {
+        a {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      &--details {
+        padding-top: 10px;
+        .details-date {
+          font-size: 12px;
+
+          .date {
+            img {
+              width: 14px;
+            }
+          }
+        }
+        .details-documents {
+          padding-left: 20px;
+          font-size: 12px;
+          .documents {
+            img {
+              width: 21px;
+            }
+          }
+        }
+      }
+    }
+    &__single {
+      &--header {
+        padding-top: 30px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--status {
+        padding-top: 20px;
+        padding-bottom: 70px;
+        p {
+          font-size: 14px;
+          span {
+            font-family: $r-regular;
+          }
+        }
+      }
+      &--document {
+        .document-list {
+          padding-top: 20px;
+
+          span {
+            flex-basis: 10%;
+            padding-right: 22px;
+            img {
+              width: 12px;
+            }
+          }
+        }
+        .document-link {
+          flex-basis: 80%;
+          font-size: 16px;
+        }
+        .date-post {
+          padding-top: 0px;
+          padding-left: 30px;
+          font-size: 14px;
+        }
+      }
+    }
+    &__comment {
+      padding-top: 40px;
+      .comments-title {
+        max-width: 1300px;
+        font-size: 20px;
+      }
+      .comment-list {
+        max-width: 1300px;
+      }
+
+      .comment-reply-title {
+        max-width: 1300px;
+        font-size: 18px;
+        small {
+          a {
+            font-size: 14px;
+            &:hover {
+              text-decoration: none !important;
+            }
+          }
+        }
+      }
+      .comment-form {
+        max-width: 1300px;
+
+        p {
+          margin: 0;
+        }
+        .comment-notes {
+          padding-top: 20px;
+          font-size: 14px;
+        }
+        .comment-form-comment {
+          margin-top: 20px;
+          label {
+            display: none;
+          }
+          textarea {
+            height: 150px;
+            font-size: 14px;
+          }
+        }
+        .form-submit {
+          margin-top: 30px;
+          .submit {
+            width: 100%;
+            height: 45px;
+            font-size: 16px;
+            &:hover {
+              transition: 0.3s ease;
+              background: $blue;
+              color: $white;
+            }
+          }
+        }
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          .row-item {
+            flex-basis: 100%;
             .comment-form-author {
               input {
                 height: 55px;

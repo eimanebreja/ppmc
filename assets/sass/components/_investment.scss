@@ -357,3 +357,225 @@
     }
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .investment {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+
+    &__tab {
+      padding-top: 40px;
+      [data-tab-content] {
+        display: none;
+      }
+
+      .active[data-tab-content] {
+        display: block;
+      }
+      &--btn {
+        li {
+          padding: 10px 40px;
+          font-size: 14px;
+        }
+      }
+      &--content {
+        padding-top: 40px;
+      }
+      &--title {
+        h3 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 16px;
+        }
+        h4 {
+          font-size: 22px;
+        }
+      }
+
+      .bottom-text {
+        padding-top: 40px;
+        p {
+          font-size: 16px;
+        }
+      }
+      &--others {
+        padding-top: 20px;
+        .others {
+          &__list {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__gallery {
+      &--container {
+        height: 650px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .investment {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+
+    &__tab {
+      padding-top: 40px;
+      [data-tab-content] {
+        display: none;
+      }
+
+      .active[data-tab-content] {
+        display: block;
+      }
+      &--btn {
+        li {
+          padding: 10px 20px;
+          font-size: 14px;
+          height: 48px;
+        }
+      }
+      &--content {
+        padding-top: 40px;
+      }
+      &--title {
+        h3 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+        h4 {
+          font-size: 20px;
+        }
+      }
+
+      .bottom-text {
+        padding-top: 40px;
+        p {
+          font-size: 16px;
+        }
+      }
+      &--others {
+        padding-top: 20px;
+        .others {
+          &__list {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__gallery {
+      &--container {
+        height: 650px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 749px) {
+  .investment {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+
+    &__tab {
+      padding-top: 40px;
+      [data-tab-content] {
+        display: none;
+      }
+
+      .active[data-tab-content] {
+        display: block;
+      }
+      &--btn {
+        flex-wrap: wrap;
+        border-bottom: 0px solid $blue;
+
+        li {
+          margin-top: 5px;
+          flex-basis: 100%;
+          padding: 10px 20px;
+          font-size: 14px;
+          height: 48px;
+        }
+      }
+      &--content {
+        padding-top: 40px;
+      }
+      &--title {
+        h3 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+        h4 {
+          font-size: 20px;
+        }
+      }
+
+      .bottom-text {
+        padding-top: 40px;
+        p {
+          font-size: 16px;
+        }
+      }
+      &--others {
+        padding-top: 20px;
+        .others {
+          &__list {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__gallery {
+      &--container {
+        height: 650px;
+      }
+    }
+  }
+}

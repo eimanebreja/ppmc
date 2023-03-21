@@ -22,21 +22,24 @@ get_header();
                 <div class="feedback__content--body">
                     <div class="feedback__content--info">
                         <div class="feedback__content--title">
-                            Website feedback form
+                            Stakeholder feedback form
                         </div>
                         <div class="feedback__content--desc">
                             <p>
-                                Please fill out this brief feedback form so we can ensure a top quality experience
-                                to all of our visitors.
+                                <!-- Please fill out this brief feedback form so we can ensure a top quality experience
+                                to all of our visitors. -->
                             </p>
-
                         </div>
                     </div>
                     <?php echo do_shortcode('[contact-form-7 id="170" title="Feedback Form"]'); ?>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
 
 <?php get_footer();

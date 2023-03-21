@@ -23,25 +23,35 @@ while (have_posts()) {
 
             <div class="procurement__single--document">
                 <?php
-if (have_rows('document_file_upload')):
-        while (have_rows('document_file_upload')): the_row();
-            $sub_value = get_sub_field('document_file');?>
+if (have_rows('document_file_upload')) {
+        while (have_rows('document_file_upload')) {
+            the_row();
+            $file_field = get_sub_field('document_file');
+            if ($file_field) {
+
+                $file_url = $file_field['url'];
+                $file_id = $file_field['id'];
+                $file_title = get_the_title($file_id);
+                $file_metadata = wp_get_attachment_metadata($file_id);
+                $file_uploaded = date('F j, Y', strtotime($file_metadata['file']));
+                $date = get_the_date('F j, Y', $file_id);
+                ?>
                 <ul class="document-menu">
                     <li class="document-list">
                         <span>
                             <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_pdf.svg" alt="Icon PDF">
                         </span>
-                        <a href="<?php echo $sub_value['url']; ?>" target="_blank"
-                            class="document-link"><?php echo $sub_value['title']; ?>
+                        <a href="<?php echo $file_url; ?>" target="_blank"
+                            class="document-link"><?php echo $file_title; ?>
                         </a>
+
+                        <p class="date-post"><span>Date Posted : </span> <?php echo $date; ?></p>
+
                     </li>
                 </ul>
-                <?php if ($sub_value): ?>
-                <?php endif;?>
-                <?php
-endwhile;
-    else:
-    endif;
+                <?php }
+        }
+    }
     ?>
             </div>
             <div class="procurement__single--status">

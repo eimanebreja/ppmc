@@ -21,7 +21,7 @@
     <?php wp_head();?>
 </head>
 
-<body <?php body_class();?>>
+<body id="body-area" <?php body_class();?>>
     <section>
         <div class="nav">
             <div class="nav__content">
@@ -42,7 +42,9 @@
                                 <img src="<?php echo THEME_DIR; ?>/assets/img/logo.svg" alt="PPMC Logo">
                             </div>
                             <div class="logo-tagline">
-                                <p>Poro Point Management Corporation</p>
+                                <p class="pc">Poro Point Management Corporation</p>
+                                <p class="sp">Poro Point Management <br>
+                                    Corporation</p>
                                 <span>a subsidiary of the Bases Conversion and Development Authority</span>
                             </div>
                         </a>
@@ -84,6 +86,18 @@
                                 </div>
                             </li>
                         </ul>
+                        <div class="nav__middlearea--hamburger">
+                            <div id="menu-icon" class="nav-menu-sp">
+                                <div class="icon-set">
+                                    <a class="hamburger">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="nav__content--bottom">
@@ -112,7 +126,7 @@ if (false !== $response_json) {
                                 <?php the_time('F j, Y');?>
                             </div>
                         </div>
-                        <ul class=" nav__bottomarea--moremenu" style="display:none">
+                        <ul class="nav__bottomarea--moremenu" style="display:none">
                             <li class="nav__bottomarea--list">
                                 <a href="<?php echo site_url('/gad'); ?>" class="nav__bottomarea--link <?php if (is_page('gad')) {
     echo "active";}?>">GAD</a>
@@ -151,3 +165,49 @@ if (false !== $response_json) {
             FEEDBACK
         </a>
     </section>
+
+
+    <div id="slideout-menu">
+        <ul>
+            <li>
+                <a href="<?php echo site_url('/'); ?>" class="<?php if (is_front_page()) {
+    echo "active";}?>">Home</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/about-us'); ?>">About Us</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/news'); ?>">News and Announcement</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/investment-opportunities'); ?>">Investment Opportunities</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/procurements'); ?>">Procurement</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/projects'); ?>">Projects</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/csr'); ?>">CSR</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/gad'); ?>">GAD</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/events'); ?>">Events</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/careers'); ?>">Careers</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/downloadables'); ?>">Downloadables</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('/gallery'); ?>">Gallery</a>
+            </li>
+            <li>
+                <a href="<?php echo site_url('contact-us/'); ?>">Contact Us</a>
+            </li>
+        </ul>
+    </div>

@@ -200,3 +200,227 @@
     }
   }
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .career {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &--title {
+        .title-icon {
+          img {
+            width: 40px;
+          }
+        }
+        .title-area {
+          padding-left: 15px;
+          font-size: 18px;
+        }
+      }
+      &--btn {
+        gap: 25px;
+        .btn {
+          width: 138px;
+          height: 42px;
+          font-size: 13px;
+          padding-left: 10px;
+
+          &.preview {
+            &::after {
+              top: 7px;
+              left: 12px;
+              transform: scale(0.7);
+            }
+          }
+          &.downloadbtn {
+            &::after {
+              top: 7px;
+              left: 12px;
+              transform: scale(0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .career {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 38px;
+        }
+      }
+      &--item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &--title {
+        .title-icon {
+          img {
+            width: 30px;
+          }
+        }
+        .title-area {
+          padding-left: 10px;
+          font-size: 16px;
+        }
+      }
+      &--btn {
+        gap: 25px;
+        .btn {
+          width: 120px;
+          height: 40px;
+          font-size: 12px;
+          padding-left: 10px;
+
+          &.preview {
+            &::after {
+              top: 5px;
+              left: 10px;
+              transform: scale(0.5);
+            }
+          }
+          &.downloadbtn {
+            &::after {
+              top: 5px;
+              left: 10px;
+              transform: scale(0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .career {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 20px;
+      padding-bottom: 50px;
+      &--body {
+        padding-top: 20px;
+      }
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-wrap: wrap;
+      }
+      &--title {
+        flex-basis: 100%;
+        .title-icon {
+          img {
+            width: 30px;
+          }
+        }
+        .title-area {
+          padding-left: 10px;
+          font-size: 16px;
+        }
+      }
+      &--btn {
+        margin-top: 20px;
+        flex-basis: 100%;
+        gap: 10px;
+        justify-content: flex-start;
+        .btn {
+          width: 100px;
+          height: 38px;
+          font-size: 12px;
+          padding-left: 10px;
+
+          &.preview {
+            &::after {
+              top: 3px;
+              left: 10px;
+              transform: scale(0.4);
+            }
+          }
+          &.downloadbtn {
+            &::after {
+              top: 3px;
+              left: 7px;
+              transform: scale(0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+}

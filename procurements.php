@@ -44,30 +44,7 @@ if (have_posts()): ?>
                             <?php the_title();?>
                         </a>
                     </div>
-                    <div class="procurement__content--desc">
-                        <p>
-                            <?php echo wp_trim_words(get_the_content(), 30, '...'); ?>
-                        </p>
-                    </div>
-                    <div class="procurement__content--details">
-                        <div class="details-date">
-                            <span class="date">
-                                <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_date.svg" alt="Icon Date">
-                            </span>
-                            <?php the_time('F j, Y');?>
-                        </div>
-                        <div class="details-documents">
-                            <span class="documents">
-                                <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_document.svg" alt="Icon PDF">
-                            </span>
-                            <?php
-    $field = get_field_object('document_type');
-    $value = $field['value'];
-    $label = $field['choices'][$value];
-    ?>
-                            <?php echo esc_html($label); ?>
-                        </div>
-                    </div>
+
                 </div>
                 <?php endwhile;?>
                 <?php else: ?>
@@ -96,25 +73,7 @@ while ($query->have_posts()): $query->the_post();?>
                     <div class="procurement__sidebar--title">
                         <a href="<?php the_permalink();?>"> <?php the_title();?></a>
                     </div>
-                    <div class="procurement__sidebar--details">
-                        <div class="details-date">
-                            <span class="date">
-                                <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_date.svg" alt="Icon Date">
-                            </span>
-                            <?php the_time('F j, Y');?>
-                        </div>
-                        <div class="details-documents">
-                            <span class="documents">
-                                <img src="<?php echo THEME_DIR; ?>/assets/img/icon/ic_document.svg" alt="Icon PDF">
-                            </span>
-                            <?php
-    $field = get_field_object('document_type');
-    $value = $field['value'];
-    $label = $field['choices'][$value];
-    ?>
-                            <?php echo esc_html($label); ?>
-                        </div>
-                    </div>
+
                 </div>
                 <?php
 endwhile;

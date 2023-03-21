@@ -128,3 +128,27 @@ $(document).ready(function () {
     $(".menu20").slideToggle("fast");
   });
 });
+
+const menuIcon = document.getElementById("menu-icon");
+const slideoutMenu = document.getElementById("slideout-menu");
+const body = document.getElementById("body-area");
+
+menuIcon.addEventListener("click", function () {
+  if (slideoutMenu.style.display == "flex") {
+    slideoutMenu.style.display = "none";
+    slideoutMenu.style.transform = "translateX(350px)";
+    body.style.overflow = "auto";
+    $(".hamburger").toggleClass("is-active");
+  } else {
+    slideoutMenu.style.display = "flex";
+    slideoutMenu.style.transform = "translateX(0px)";
+    body.style.overflow = "hidden";
+    $(".hamburger").toggleClass("is-active");
+  }
+});
+
+// (function () {
+//   $("#menu-icon").on("click", function () {
+//     $(".hamburger").toggleClass("is-active");
+//   });
+// })();

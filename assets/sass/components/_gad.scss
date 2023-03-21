@@ -68,6 +68,8 @@
     padding-bottom: 30px;
     &__container {
       max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
     &__banner {
       height: 280px;
@@ -89,6 +91,133 @@
       }
       &--body {
         padding-top: 30px;
+        p {
+          font-size: 16px;
+        }
+        ul {
+          li {
+            padding-top: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  .gad {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+        p {
+          font-size: 16px;
+        }
+        ul {
+          li {
+            padding-top: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1023px) {
+  .gad {
+    padding-top: 190px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 1300px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 280px;
+
+      &--title {
+        h2 {
+          font-size: 38px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 90px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &--body {
+        padding-top: 30px;
+        p {
+          font-size: 16px;
+        }
+        ul {
+          li {
+            padding-top: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 749px) {
+  .gad {
+    padding-top: 105px;
+    padding-bottom: 30px;
+    &__container {
+      max-width: 380px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__banner {
+      height: 225px;
+
+      &--title {
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+    &__content {
+      padding-top: 40px;
+      padding-bottom: 30px;
+      &--header {
+        padding-bottom: 10px;
+        h3 {
+          font-size: 26px;
+        }
+      }
+      &--body {
+        padding-top: 10px;
         p {
           font-size: 16px;
         }

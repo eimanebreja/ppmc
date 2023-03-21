@@ -4,7 +4,9 @@
     <div class="homebanner__bg">
         <div class="homebanner__container">
             <div class="homebanner__title">
-                <h2>Learn more about Poro Point <br>
+                <h2 class="pc">PORO POINT MARINE HEADLANDS: <br>
+                    and its many advantages now!</h2>
+                <h2 class="sp">PORO POINT MARINE HEADLANDS: <br>
                     and its many advantages now!</h2>
             </div>
         </div>
@@ -75,18 +77,26 @@ if (have_posts()): ?>
                             <a href="" class="viewmore">Read more</a>
                         </div>
                     </div>
-                    <a href="<?php echo site_url('/citizens-charter'); ?>" class="homenews__about--morelink">
-                        CITIZEN’S CHARTER
-                    </a>
-                    <a href="<?php echo site_url('/faqs'); ?>" class="homenews__about--morelink">
-                        FAQs
-                    </a>
-                    <a href="<?php echo site_url('/privacy-notice'); ?>" class="homenews__about--morelink">
-                        PRIVACY NOTICE
-                    </a>
+                    <div class="homenews__about--morelink-area">
+                        <a href="<?php echo site_url('/citizens-charter'); ?>" class="homenews__about--morelink">
+                            CITIZEN’S CHARTER
+                        </a>
+                        <a href="<?php echo site_url('/faqs'); ?>" class="homenews__about--morelink">
+                            FAQs
+                        </a>
+                        <a href="<?php echo site_url('/privacy-notice'); ?>" class="homenews__about--morelink">
+                            PRIVACY NOTICE
+                        </a>
+                        <a target="_blank" rel="noopener"
+                            href="https://docs.google.com/forms/d/1gf66VfdOud9vMExPEH1COzmLlCcomwz3yiOgX7nMjGc/viewform?ts=63d9cfd7&edit_requested=true&pli=1"
+                            class="homenews__about--morelink">
+                            FOI REQUEST FEEDBACK FORM
+                        </a>
 
+                    </div>
                     <div class="homenews__about--logos">
-                        <a href="https://www.foi.gov.ph/" target="_blank" class="homenews__about--logo">
+                        <a href="https://www.foi.gov.ph/requests?agency=PPMC&fbclid=IwAR137HuWDzEDuCEwzX41GkjmWEs7h7AyY3QkPBnrw9KbMrkvd1dPJl2snhQ"
+                            target="_blank" class="homenews__about--logo">
                             <img src="<?php echo THEME_DIR; ?>/assets/img/logo/foi_logo.png"
                                 alt="Freedom of Information">
                         </a>
@@ -132,18 +142,18 @@ if (have_posts()): ?>
                     <p>Zone Locators</p>
                 </div>
                 <div class="homelocators__row">
-                    <a href="" class="homelocators__row--item">
+                    <a href="<?php echo site_url('/profile-locators'); ?>" class="homelocators__row--item">
 
                         <div class="homelocators__row--content">
                             <p>
-                                Profile <br>
+                                Profile of <br>
                                 Locators
                             </p>
                             <span>Click here to learn more</span>
                         </div>
 
                     </a>
-                    <a href="" class="homelocators__row--item">
+                    <a href="<?php echo site_url('/application-permits'); ?>" class="homelocators__row--item">
                         <div class="homelocators__row--content">
                             <p>
                                 Application <br>
@@ -152,13 +162,13 @@ if (have_posts()): ?>
                             <span>Click here for Online Permit Applications</span>
                         </div>
                     </a>
-                    <a href="" class="homelocators__row--item">
+                    <a href="<?php echo site_url('/job-opening'); ?>" class="homelocators__row--item">
                         <div class="homelocators__row--content">
                             <p>
                                 JOB <br>
                                 OPENINGS
                             </p>
-                            <span>Click here to for Job Opportunities</span>
+                            <span>Click here for Job Opportunities</span>
                         </div>
                     </a>
                 </div>
